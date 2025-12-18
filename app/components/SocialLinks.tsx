@@ -88,34 +88,6 @@ export default function SocialLinks() {
           className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 rounded-full"
         />
       </Link>
-      <Link
-        href="https://leetcode.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex h-16 w-16 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
-      >
-        <Image
-          src="/Images/SocialMedia/leetcode.png"
-          alt="LeetCode"
-          width={32}
-          height={32}
-          className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 rounded-full"
-        />
-      </Link>
-      <Link
-        href="https://hackerrank.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex h-16 w-16 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
-      >
-        <Image
-          src="/Images/SocialMedia/hackerrank.png"
-          alt="HackerRank"
-          width={32}
-          height={32}
-          className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 rounded-full"
-        />
-      </Link>
     </div>
   );
 }
