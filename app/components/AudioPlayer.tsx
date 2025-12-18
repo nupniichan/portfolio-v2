@@ -195,9 +195,7 @@ const AudioPlayer = ({ className = '' }: AudioPlayerProps) => {
                 </span>
                 <div className="overflow-hidden flex-1">
                   <div
-                    className={`text-white whitespace-nowrap ${
-                      isPlaying && currentTrack.title.length > 20 ? 'animate-marquee' : ''
-                    }`}
+                    className="text-white whitespace-nowrap"
                     title={currentTrack.title}
                   >
                     {currentTrack.title}
