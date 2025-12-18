@@ -20,12 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={notoSans.className}>
-        <div className="relative bg-[url('/Images/Background/background.gif')] bg-cover bg-center">
-          <main className="relative z-10">
-            <div className="relative z-10">
-              {children}
-            </div>
+      <body className={`${notoSans.className} min-h-screen flex flex-col`}>
+        <div className="relative flex-1 bg-[url('/Images/Background/background.gif')] bg-cover bg-center">
+          <main className="relative z-10 flex-1">
+            {children}
           </main>
           <AudioPlayer />
         </div>

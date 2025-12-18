@@ -8,7 +8,7 @@ export default function SocialLinks() {
         href="https://facebook.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex h-16 w-16 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 transition"
+        className="flex h-16 w-16 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
       >
         <Image
           src="/Images/SocialMedia/facebook.png"
@@ -22,7 +22,7 @@ export default function SocialLinks() {
         href="https://github.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex h-16 w-16 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 transition"
+        className="flex h-16 w-16 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
       >
         <Image
           src="/Images/SocialMedia/github.png"
@@ -36,7 +36,7 @@ export default function SocialLinks() {
         href="https://youtube.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex h-16 w-16 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 transition"
+        className="flex h-16 w-16 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
       >
         <Image
           src="/Images/SocialMedia/youtube.png"
@@ -50,7 +50,7 @@ export default function SocialLinks() {
         href="https://discord.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex h-16 w-16 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 transition"
+        className="flex h-16 w-16 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
       >
         <Image
           src="/Images/SocialMedia/discord.png"
@@ -64,7 +64,7 @@ export default function SocialLinks() {
         href="https://anilist.co"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex h-16 w-16 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 transition"
+        className="flex h-16 w-16 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
       >
         <Image
           src="/Images/SocialMedia/Anilist.png"
@@ -78,7 +78,7 @@ export default function SocialLinks() {
         href="https://linkedin.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex h-16 w-16 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 transition"
+        className="flex h-16 w-16 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
       >
         <Image
           src="/Images/SocialMedia/linkedin.png"
