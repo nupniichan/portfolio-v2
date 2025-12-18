@@ -4,24 +4,10 @@ import "./page.css";
 import Image from "next/image";
 import Typewriter from "./components/Typewriter";
 import SocialLinks from "./components/SocialLinks";
-import { useThemeLanguage } from "./components/ThemeLanguageProvider";
-
-const homeTexts = {
-  en: {
-    greeting: "Hi, I'm Nguyen Phi Quoc Bao",
-    connect: "Connect with me ⸜(｡˃ ᵕ ˂ )⸝♡",
-    status: "Online",
-  },
-  vi: {
-    greeting: "Xin chào, mình là Nguyễn Phi Quốc Bảo",
-    connect: "Kết nối với mình nhé ⸜(｡˃ ᵕ ˂ )⸝♡",
-    status: "Đang online",
-  },
-} as const;
+import { useTranslations } from "./hooks/useTranslations";
 
 export default function Home() {
-  const { language } = useThemeLanguage();
-  const t = homeTexts[language];
+  const { t } = useTranslations();
 
   return (
     <div className="flex min-h-screen items-center justify-center p-4 sm:p-6 md:p-12 lg:p-24">
@@ -32,7 +18,7 @@ export default function Home() {
               Quốc Bảo
             </div>
             <div className="text-center md:text-left text-xl md:text-2xl lg:text-3xl font-bold text-white text-stroke animate-slide-up delay-100">
-              {t.greeting}
+              {t('home.greeting')}
             </div>
             <div className="animate-slide-up delay-200">
               <Typewriter />
@@ -40,7 +26,7 @@ export default function Home() {
             <div className="mt-4 md:mt-6 animate-slide-up delay-300">
               <p className="text-center md:text-left text-lg md:text-xl lg:text-2xl font-semibold">
                 <span className="bg-linear-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
-                  {t.connect}
+                  {t('home.connect')}
                 </span>
               </p>
             </div>
@@ -66,7 +52,7 @@ export default function Home() {
             <div className="online-status inline-flex items-center gap-2 rounded-full bg-white/10 px-3 sm:px-4 py-1 text-xs sm:text-sm text-white shadow-lg backdrop-blur mt-3 sm:mt-4 animate-slide-up delay-400">
               <span className="h-2 w-2 rounded-full bg-green-400" />
               <span className="uppercase tracking-[0.2em] text-xs text-gray-200">
-                {t.status}
+                {t('home.status')}
               </span>
             </div>
           </div>

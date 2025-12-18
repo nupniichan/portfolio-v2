@@ -1,0 +1,100 @@
+{
+  "en": {
+    "home": {
+      "greeting": "Hi, I'm Nguyen Phi Quoc Bao",
+      "connect": "Connect with me ⸜(｡˃ ᵕ ˂ )⸝♡",
+      "status": "Online"
+    },
+    "navigation": {
+      "home": "Home",
+      "about": "About me",
+      "projects": "Projects",
+      "education": "Education & Work",
+      "contact": "Contact"
+    },
+    "header": {
+      "theme": {
+        "dark": "Dark",
+        "light": "Light"
+      },
+      "language": {
+        "en": "EN",
+        "vi": "VI"
+      }
+    },
+    "typewriter": {
+      "messages": [
+        "Nice to meet you (≧∇≦)/",
+        "は じ め ま し て (≧∇≦)/",
+        "Rất vui được gặp cậu (≧∇≦)/"
+      ]
+    },
+    "pages": {
+      "about": {
+        "title": "About me",
+        "description": "This is the About me page. You can put your personal introduction, goals and story here."
+      },
+      "contact": {
+        "title": "Contact",
+        "description": "This is the Contact page. You can put your contact information or a contact form here."
+      },
+      "education": {
+        "title": "Education & Work",
+        "description": "This is the Education & Work page. You can describe your education background and work experience here."
+      },
+      "projects": {
+        "title": "Projects",
+        "description": "This is the Projects page. You can showcase your personal and professional projects here."
+      }
+    }
+  },
+  "vi": {
+    "home": {
+      "greeting": "Xin chào, mình là Nguyễn Phi Quốc Bảo",
+      "connect": "Kết nối với mình nhé ⸜(｡˃ ᵕ ˂ )⸝♡",
+      "status": "Đang online"
+    },
+    "navigation": {
+      "home": "Trang chủ",
+      "about": "Giới thiệu",
+      "projects": "Dự án",
+      "education": "Học vấn & Công việc",
+      "contact": "Liên hệ"
+    },
+    "header": {
+      "theme": {
+        "dark": "Tối",
+        "light": "Sáng"
+      },
+      "language": {
+        "en": "EN",
+        "vi": "VI"
+      }
+    },
+    "typewriter": {
+      "messages": [
+        "Rất vui được gặp cậu (≧∇≦)/",
+        "は じ め ま し て (≧∇≦)/",
+        "Nice to meet you (≧∇≦)/"
+      ]
+    },
+    "pages": {
+      "about": {
+        "title": "Giới thiệu",
+        "description": "Đây là trang Giới thiệu. Bạn có thể đặt phần giới thiệu cá nhân, mục tiêu và câu chuyện của mình ở đây."
+      },
+      "contact": {
+        "title": "Liên hệ",
+        "description": "Đây là trang Liên hệ. Bạn có thể đặt thông tin liên hệ hoặc biểu mẫu liên hệ ở đây."
+      },
+      "education": {
+        "title": "Học vấn & Công việc",
+        "description": "Đây là trang Học vấn & Công việc. Bạn có thể mô tả nền tảng học vấn và kinh nghiệm làm việc ở đây."
+      },
+      "projects": {
+        "title": "Dự án",
+        "description": "Đây là trang Dự án. Bạn có thể giới thiệu các dự án cá nhân và chuyên nghiệp ở đây."
+      }
+    }
+  }
+}

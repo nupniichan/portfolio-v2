@@ -1,24 +1,22 @@
  "use client";
 
  import { useEffect, useState } from "react";
-
- const MESSAGES = [
-   "Rất vui được gặp cậu (≧∇≦)/",
-   "は じ め ま し て (≧∇≦)/",
-   "Nice to meet you (≧∇≦)/",
- ];
+ import { useTranslations } from "../hooks/useTranslations";
 
  const TYPING_SPEED = 90;
  const ERASING_SPEED = 60;
  const PAUSE_AFTER_TYPED = 1200;
 
  export default function Typewriter() {
+   const { t } = useTranslations();
+   const messages = t('typewriter.messages') as string[];
+
    const [messageIndex, setMessageIndex] = useState(0);
    const [text, setText] = useState("");
    const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const fullText = MESSAGES[messageIndex];
+    const fullText = messages[messageIndex];
 
     if (!isDeleting && text === fullText) {
       const pauseTimeout = setTimeout(() => {
@@ -31,7 +29,7 @@
       // Use setTimeout to avoid synchronous state updates
       setTimeout(() => {
         setIsDeleting(false);
-        setMessageIndex((prev) => (prev + 1) % MESSAGES.length);
+        setMessageIndex((prev) => (prev + 1) % messages.length);
       }, 0);
       return;
     }
@@ -49,7 +47,7 @@
     );
 
     return () => clearTimeout(timer);
-  }, [text, isDeleting, messageIndex]);
+  }, [text, isDeleting, messageIndex, messages]);
 
    return (
      <div className="text-center text-lg sm:text-xl md:text-2xl font-bold text-white text-stroke">

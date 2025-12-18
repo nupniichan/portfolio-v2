@@ -3,11 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useThemeLanguage } from "./ThemeLanguageProvider";
-import { NAV_ITEMS, NAV_LABELS } from "../config/navigation";
+import { NAV_ITEMS, getNavLabels } from "../config/navigation";
+import { useTranslations } from "../hooks/useTranslations";
 
 export default function Header() {
   const pathname = usePathname();
   const { theme, language, toggleTheme, toggleLanguage } = useThemeLanguage();
+  const { t } = useTranslations();
+  const navLabels = getNavLabels(language);
 
   return (
     <div className="pointer-events-none fixed inset-x-0 top-0 z-30 flex justify-center">
@@ -31,7 +34,7 @@ export default function Header() {
                     : "text-gray-200/80 hover:text-white"
                 }`}
               >
-                <span>{NAV_LABELS[language][item.key]}</span>
+                <span>{navLabels[item.key]}</span>
                 <span
                   className={`pointer-events-none absolute inset-x-1 bottom-0.5 h-0.5 rounded-full bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 transition-all duration-200 origin-center ${
                     isActive
@@ -51,7 +54,7 @@ export default function Header() {
             className="inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-2 py-1 text-gray-100 transition-all duration-200 hover:bg-white/20 hover:border-white/40"
           >
             <span className="text-[10px] sm:text-xs uppercase tracking-[0.15em]">
-              {theme === "dark" ? "Dark" : "Light"}
+              {t(`header.theme.${theme}`)}
             </span>
           </button>
 
@@ -65,7 +68,7 @@ export default function Header() {
                   : "text-gray-100 hover:bg-white/10"
               }`}
             >
-              EN
+              {t('header.language.en')}
             </button>
             <button
               type="button"
@@ -76,7 +79,7 @@ export default function Header() {
                   : "text-gray-100 hover:bg-white/10"
               }`}
             >
-              VI
+              {t('header.language.vi')}
             </button>
           </div>
         </div>
