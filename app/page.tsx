@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen items-center justify-center p-2 sm:p-3 md:p-4 lg:p-6">
-      <div className="w-full max-w-[95%] sm:max-w-[80%] md:max-w-[75%] lg:max-w-[70%] xl:max-w-[60%] floating-container">
+      <div className="w-full max-w-[95%] sm:max-w-[80%] md:max-w-[75%] lg:max-w-[70%] xl:max-w-[60%] floating-container max-sm:[animation:none]">
         <div className="flex flex-col md:flex-row items-center p-2.5 md:p-4 lg:p-6">
           <div className="w-full md:w-1/2 flex flex-col justify-start items-center md:items-start space-y-1 md:space-y-2 order-2 md:order-1">
             <div className="text-center md:text-left md:mt-0 text-lg md:text-xl lg:text-2xl font-extrabold text-white text-stroke animate-slide-up">
@@ -49,7 +49,7 @@ export default function Home() {
             <span className="text-white text-stroke animate-slide-up mt-1 delay-300 text-[12px]">
               @nupniichan
             </span>
-            <div className="online-status inline-flex items-center gap-1 rounded-full bg-white/10 px-1.5 sm:px-2 py-0.5 text-[8px] sm:text-[10px] text-white shadow-lg backdrop-blur mt-1 sm:mt-1.5 animate-slide-up delay-400">
+            <div className="online-status inline-flex items-center gap-1 rounded-full bg-white/10 px-1.5 sm:px-2 py-0.5 text-[8px] sm:text-[10px] text-white sm:shadow-lg sm:backdrop-blur mt-1 sm:mt-1.5">
               <span className="h-1 w-1 rounded-full bg-green-400" />
               <span className="uppercase tracking-[0.2em] text-[8px] text-gray-200">
                 {t('home.status')}

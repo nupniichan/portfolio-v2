@@ -13,11 +13,11 @@ export default function Header() {
   const navLabels = getNavLabels(language);
 
   return (
-    <div className="pointer-events-none fixed inset-x-0 top-0 z-30 flex justify-center">
+    <div className="pointer-events-none fixed inset-x-0 top-0 z-30 flex justify-center px-1 sm:px-2">
       <header
-        className="pointer-events-auto mt-1.5 w-[95%] max-w-2xl rounded-full border px-2 py-1 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.45)] transition-all duration-300 animate-header-slide flex items-center justify-between gap-2"
+        className="pointer-events-auto mt-1 sm:mt-1.5 w-full max-w-2xl rounded-full border px-1.5 sm:px-2 py-0.5 sm:py-1 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.45)] transition-all duration-300 animate-header-slide flex items-center justify-between gap-1 sm:gap-2 overflow-hidden"
       >
-        <nav className="flex items-center gap-0.5 text-[10px] sm:text-[11px]">
+        <nav className="flex items-center gap-0.5 sm:gap-1 text-[9px] sm:text-[11px] min-w-0 flex-1">
           {NAV_ITEMS.map((item) => {
             const isActive =
               item.href === "/"
@@ -28,7 +28,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative rounded-full px-1.5 py-0.5 font-medium transition-all duration-200 ${
+                className={`relative rounded-full px-1 sm:px-1.5 py-0.5 font-medium transition-all duration-200 whitespace-nowrap shrink-0 ${
                   isActive
                     ? "text-white"
                     : "text-gray-200/80 hover:text-white"
@@ -47,22 +47,22 @@ export default function Header() {
           })}
         </nav>
 
-        <div className="flex items-center gap-1 text-[8px] sm:text-[10px]">
+        <div className="flex items-center gap-0.5 sm:gap-1 text-[7px] sm:text-[10px] shrink-0">
           <button
             type="button"
             onClick={toggleTheme}
-            className="inline-flex items-center gap-0.5 rounded-full border border-white/20 bg-white/10 px-1 py-0.5 text-gray-100 transition-all duration-200 hover:bg-white/20 hover:border-white/40"
+            className="inline-flex items-center gap-0.5 rounded-full border border-white/20 bg-white/10 px-0.5 sm:px-1 py-0.5 text-gray-100 transition-all duration-200 hover:bg-white/20 hover:border-white/40"
           >
-            <span className="text-[7px] sm:text-[8px] uppercase tracking-[0.15em]">
+            <span className="text-[6px] sm:text-[8px] uppercase tracking-widest sm:tracking-[0.15em]">
               {t(`header.theme.${theme}`)}
             </span>
           </button>
 
-          <div className="inline-flex items-center gap-0.5 rounded-full border border-white/20 bg-white/10 p-0.5 text-gray-100 text-[7px] sm:text-[8px] font-semibold">
+          <div className="inline-flex items-center gap-0.5 rounded-full border border-white/20 bg-white/10 p-0.5 text-gray-100 text-[6px] sm:text-[8px] font-semibold">
             <button
               type="button"
               onClick={() => language === "vi" && toggleLanguage()}
-              className={`rounded-full px-1 py-0.5 transition-all duration-150 ${
+              className={`rounded-full px-0.5 sm:px-1 py-0.5 transition-all duration-150 ${
                 language === "en"
                   ? "bg-white text-black"
                   : "text-gray-100 hover:bg-white/10"
@@ -73,7 +73,7 @@ export default function Header() {
             <button
               type="button"
               onClick={() => language === "en" && toggleLanguage()}
-              className={`rounded-full px-1 py-0.5 transition-all duration-150 ${
+              className={`rounded-full px-0.5 sm:px-1 py-0.5 transition-all duration-150 ${
                 language === "vi"
                   ? "bg-white text-black"
                   : "text-gray-100 hover:bg-white/10"
