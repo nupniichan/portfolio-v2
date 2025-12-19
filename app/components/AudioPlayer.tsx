@@ -9,6 +9,7 @@ interface AudioPlayerProps {
 
 const AudioPlayer = ({ className = '' }: AudioPlayerProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -17,6 +18,14 @@ const AudioPlayer = ({ className = '' }: AudioPlayerProps) => {
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
 
   const audioRef = useRef<HTMLAudioElement>(null);
+
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsExpanded(false);
+      setIsClosing(false);
+    }, 300);
+  };
 
   const tracks = [
     {
@@ -168,10 +177,7 @@ const AudioPlayer = ({ className = '' }: AudioPlayerProps) => {
       {!isExpanded && (
         <div className={`fixed bottom-4 right-4 z-50 ${className}`}>
           <button
-            onClick={() => {
-              setIsExpanded(true);
-              audioRef.current?.play().catch(() => {});
-            }}
+            onClick={() => setIsExpanded(true)}
             className={`w-8 h-8 rounded-full bg-[#CCCCFF] hover:bg-[#BBBBFF] text-black shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 animate-in slide-in-from-bottom-4 flex items-center justify-center group relative ${isPlaying ? 'animate-pulse' : ''}`}
             title="Open Audio Player"
           >
@@ -185,26 +191,27 @@ const AudioPlayer = ({ className = '' }: AudioPlayerProps) => {
 
       {isExpanded && (
         <div className={`fixed bottom-4 right-4 z-50 ${className}`}>
-          <div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-xl p-2 shadow-2xl animate-in slide-in-from-bottom-4 duration-500 max-w-[220px]">
+          <div className={`bg-black/80 backdrop-blur-md border border-white/20 rounded-xl p-2 shadow-2xl max-w-[220px] relative ${isClosing ? 'animate-audio-player-close' : 'animate-audio-player-open'}`}>
             <button
-              onClick={() => setIsExpanded(false)}
-              className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#CCCCFF] text-black hover:bg-[#BBBBFF] transition-colors duration-200 text-xs font-bold flex items-center justify-center"
+              onClick={handleClose}
+              className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#CCCCFF] text-black hover:bg-[#BBBBFF] transition-colors duration-200 text-xs font-bold flex items-center justify-center z-10"
               title="Close"
             >
               ×
             </button>
 
-            <div className="flex items-center gap-1 mb-1">
-              <div className="flex items-center gap-1 text-[10px] font-medium">
-                <span className="text-[#CCCCFF]">
+            <div className="flex items-center gap-1 mb-1 pr-6">
+              <div className="flex items-center gap-1 text-[10px] font-medium flex-1 min-w-0">
+                <span className="text-[#CCCCFF] whitespace-nowrap">
                   {isPlaying ? 'Playing:' : 'Paused:'}
                 </span>
-                <div className="overflow-hidden flex-1">
+                <div className="overflow-hidden flex-1 min-w-0 relative">
                   <div
-                    className="text-white whitespace-nowrap"
+                    className="text-white whitespace-nowrap animate-scroll-text"
                     title={currentTrack.title}
                   >
-                    {currentTrack.title}
+                    <span>{currentTrack.title}</span>
+                    <span className="ml-4">{currentTrack.title}</span>
                   </div>
                 </div>
               </div>

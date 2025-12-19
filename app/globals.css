@@ -218,3 +218,51 @@ body {
   border-radius: 20px;
   border: 3px solid #05050a;
 }
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
+.animate-scroll-text {
+  display: inline-flex;
+  animation: scroll-text 10s linear infinite;
+}
+
+.animate-scroll-text:hover {
+  animation-play-state: paused;
+}
+
+@keyframes audio-player-open {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes audio-player-close {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+}
+
+.animate-audio-player-open {
+  animation: audio-player-open 0.3s ease-out forwards;
+}
+
+.animate-audio-player-close {
+  animation: audio-player-close 0.25s ease-in forwards;
+}
