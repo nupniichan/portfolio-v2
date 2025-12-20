@@ -51,3 +51,4 @@ export default function LoadingOverlay({ isVisible }: LoadingOverlayProps) {
     </div>
   );
 }
+
