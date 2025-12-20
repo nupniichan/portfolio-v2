@@ -27,7 +27,7 @@ export default function ProjectsPage() {
     setTimeout(() => {
       setSelectedProject(null);
       setIsClosing(false);
-    }, 300); // Match animation duration
+    }, 300);
   };
 
   const projects = [
@@ -71,11 +71,29 @@ export default function ProjectsPage() {
   return (
     <>
       <MetadataUpdater pageKey="projects" />
-      <div className="flex min-h-screen items-center justify-center p-2 sm:p-3 md:p-4 lg:p-4">
-        <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] xl:max-w-[1100px] relative py-8">
+      <div className="flex min-h-screen items-center justify-center p-2 sm:p-3 md:p-4 lg:p-4 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-16 right-16 w-28 h-28 bg-[#CCCCFF]/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: '0s', animationDuration: '4s' }}></div>
+          <div className="absolute bottom-24 left-12 w-36 h-36 bg-[#CCCCFF]/6 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.5s', animationDuration: '5s' }}></div>
+          <div className="absolute top-1/3 left-1/4 w-24 h-24 bg-[#CCCCFF]/4 rounded-full blur-lg animate-pulse" style={{ animationDelay: '2.5s', animationDuration: '6s' }}></div>
+          <div className="absolute top-1/4 left-1/3 w-14 h-14 border-2 border-[#CCCCFF]/15 rotate-45 animate-spin-slow"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-10 h-10 bg-[#CCCCFF]/8 rotate-12 animate-spin-reverse" style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}></div>
+          <div className="absolute top-1/2 right-1/3 w-18 h-18 bg-linear-to-br from-[#CCCCFF]/8 to-transparent rounded-full blur-md animate-floating"></div>
+          <div className="absolute bottom-1/4 left-1/2 w-32 h-32 bg-linear-to-tl from-[#CCCCFF]/6 to-transparent rounded-full blur-lg" style={{ animation: 'floating 7s ease-in-out infinite', animationDelay: '2s' }}></div>
+        </div>
+
+        <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] xl:max-w-[1100px] relative py-8 z-10">
           <div className="floating-container animate-fade-in-up relative">
             <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#CCCCFF]/30 -translate-x-2 -translate-y-2"></div>
             <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#CCCCFF]/30 translate-x-2 translate-y-2"></div>
+            
+            <div className="absolute top-4 right-4 w-3 h-3 border border-[#CCCCFF]/20 rotate-45"></div>
+            <div className="absolute bottom-4 left-4 w-3 h-3 border border-[#CCCCFF]/20 rotate-45"></div>
+            <div className="absolute top-0 right-0 w-2 h-2 bg-[#CCCCFF]/30"></div>
+            <div className="absolute bottom-0 left-0 w-2 h-2 bg-[#CCCCFF]/30"></div>
+            
+            <div className="absolute top-1/2 left-0 w-1 h-24 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent -translate-x-4"></div>
+            <div className="absolute top-1/2 right-0 w-1 h-24 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent translate-x-4"></div>
 
             <div className="about-section p-2 md:p-4 lg:p-5">
               <div 
@@ -103,6 +121,9 @@ export default function ProjectsPage() {
                   >
                     <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-[#CCCCFF]/40"></div>
                     <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-[#CCCCFF]/40"></div>
+                    <div className="absolute top-2 right-2 w-1.5 h-1.5 bg-[#CCCCFF]/30 rounded-full animate-pulse" style={{ animationDelay: `${index * 0.15}s` }}></div>
+                    <div className="absolute bottom-2 left-2 w-1 h-1 bg-[#CCCCFF]/40 rounded-full"></div>
+                    <div className="absolute top-1/2 left-0 w-0.5 h-6 bg-linear-to-b from-transparent via-[#CCCCFF]/10 to-transparent group-hover:via-[#CCCCFF]/30 transition-colors"></div>
 
                     <div className="flex items-start justify-between mb-3">
                       <div className="p-1.5 bg-[#CCCCFF]/10 border border-[#CCCCFF]/20 group-hover:scale-110 transition-transform duration-300">
@@ -140,10 +161,13 @@ export default function ProjectsPage() {
               </div>
 
               <div 
-                className="mt-6 pt-5 border-t border-white/10 flex justify-center sm:justify-end items-center gap-2"
+                className="mt-6 pt-5 border-t border-white/10 flex justify-center sm:justify-end items-center gap-2 relative"
                 data-aos="fade-up"
                 data-aos-delay={100 * (projects.length + 1)}
               >
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-12 h-0.5 bg-linear-to-r from-[#CCCCFF]/20 to-transparent"></div>
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-0.5 bg-linear-to-l from-[#CCCCFF]/20 to-transparent"></div>
+                
                 <p className="text-[10px] md:text-[11px] text-gray-400 italic">
                   {t('pages.projects.moreProjects')} <a href="https://github.com/nupniichan?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-[#CCCCFF] hover:underline underline-offset-4 font-bold">{t('pages.projects.moreProjectsLink')}</a> {t('pages.projects.moreProjectsEmoji')}
                 </p>
@@ -154,7 +178,6 @@ export default function ProjectsPage() {
         </div>
       </div>
 
-      {/* Project Detail Modal */}
       {selectedProject && activeProject && (
         <div 
           className={`fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm ${isClosing ? 'animate-fade-out' : 'animate-fade-in'}`}
@@ -164,9 +187,13 @@ export default function ProjectsPage() {
             className={`w-full max-w-2xl bg-[#0a0a0f] border border-white/10 relative overflow-hidden ${isClosing ? 'animate-slide-down' : 'animate-slide-up'}`}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Decorative corners */}
             <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#CCCCFF]/30"></div>
             <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#CCCCFF]/30"></div>
+            
+            <div className="absolute top-4 left-4 w-2 h-2 bg-[#CCCCFF]/30"></div>
+            <div className="absolute bottom-4 right-4 w-2 h-2 bg-[#CCCCFF]/30"></div>
+            <div className="absolute top-1/2 left-0 w-1 h-16 bg-linear-to-b from-transparent via-[#CCCCFF]/15 to-transparent"></div>
+            <div className="absolute top-1/2 right-0 w-1 h-16 bg-linear-to-b from-transparent via-[#CCCCFF]/15 to-transparent"></div>
             
             <button 
               onClick={handleClose}

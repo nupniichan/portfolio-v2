@@ -1,6 +1,6 @@
 import translations from "../locales/translations.json";
 
-export type NavKey = "home" | "about" | "projects" | "education" | "contact";
+export type NavKey = "home" | "about" | "skills" | "projects" | "education" | "contact";
 
 export type NavigationItem = {
   href: string;
@@ -10,6 +10,7 @@ export type NavigationItem = {
 export const NAV_ITEMS: readonly NavigationItem[] = [
   { href: "/", key: "home" },
   { href: "/about-me", key: "about" },
+  { href: "/skills", key: "skills" },
   { href: "/projects", key: "projects" },
   { href: "/education-work", key: "education" },
   { href: "/contact", key: "contact" },

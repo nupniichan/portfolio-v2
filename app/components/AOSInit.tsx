@@ -7,7 +7,6 @@ export default function AOSInit() {
   const pathname = usePathname();
 
   useEffect(() => {
-    // ... load AOS logic ...
     const loadAOS = () => {
       return new Promise<void>((resolve) => {
         if ((window as any).AOS) {
@@ -24,7 +23,6 @@ export default function AOSInit() {
     };
 
     const initAOS = async () => {
-      // Load AOS CSS
       if (!document.getElementById("aos-css")) {
         const link = document.createElement("link");
         link.id = "aos-css";
@@ -46,7 +44,6 @@ export default function AOSInit() {
     initAOS();
   }, []);
 
-  // Refresh AOS on route change
   useEffect(() => {
     if ((window as any).AOS) {
       (window as any).AOS.refresh();

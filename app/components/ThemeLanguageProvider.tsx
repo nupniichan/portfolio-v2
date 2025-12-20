@@ -93,8 +93,8 @@ export function ThemeLanguageProvider({ children }: { children: ReactNode }) {
       setTheme((prev) => (prev === "dark" ? "light" : "dark"));
       setTimeout(() => {
         setIsLoading(false);
-      }, 1000); // Overlay stays a bit after theme change
-    }, 500); // Theme change happens while overlay is fully visible
+      }, 1000);
+    }, 500);
   };
 
   const toggleLanguage = () => {

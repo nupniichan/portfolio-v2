@@ -8,6 +8,7 @@
     "navigation": {
       "home": "Home",
       "about": "About me",
+      "skills": "Skills",
       "projects": "Projects",
       "education": "Education & Work",
       "contact": "Contact"
@@ -53,6 +54,69 @@
           "music": "Listening to music",
           "anime": "Watching anime",
           "gaming": "Gaming"
+        }
+      },
+      "skills": {
+        "title": "Skills",
+        "metaTitle": "Skills - nupniichan",
+        "description": "This is the Skills page. You can showcase your technical skills and competencies here.",
+        "header": "My Skills",
+        "headerEmoji": "⚡( •̀ ω •́ )✧",
+        "categories": {
+          "frontend": "Frontend",
+          "backend": "Backend",
+          "database": "Database",
+          "programming": {
+            "title": "Programming Languages",
+            "items": ["C#", "JavaScript", "TypeScript", "Python", "HTML", "CSS", "SQL"]
+          },
+          "frameworks": {
+            "title": "Frameworks & Libraries",
+            "items": [".NET", "ASP.NET MVC", "Next.js", "React", "Node.js", "Entity Framework"]
+          },
+          "tools": {
+            "title": "Tools & Technologies",
+            "items": ["Git", "Docker", "Visual Studio", "VS Code", "Postman", "Jira"]
+          },
+          "cloud": {
+            "title": "Cloud & Services",
+            "items": ["Azure", "AWS", "RESTful API", "SSO", "Email Services"]
+          },
+          "devops": {
+            "title": "DevOps",
+            "items": ["Kubernetes", "CI/CD", "Linux", "Shell Scripting"]
+          }
+        },
+        "tools": {
+            "title": "Tools & Other Skills",
+            "docker": "Containerization & App Management",
+            "linux": "System Admin & Deployment",
+            "git": "Source Control & Versioning",
+            "others": "Figma, Unity, Android Studio..."
+        },
+        "languages": {
+            "title": "Languages",
+            "proficiency": "Proficiency",
+            "vietnamese": {
+                "name": "Vietnamese",
+                "description": "Native",
+                "badge1": "Natural",
+                "badge2": "Fluent"
+            },
+            "english": {
+                "name": "English",
+                "description": "Upper-intermediate",
+                "badge1": "B2",
+                "badge2": "C1"
+            }
+        },
+        "futureLearning": {
+            "title": "Study Plans",
+            "items": [
+                { "title": "AI & Machine Learning", "description": "Exploring Neural Networks" },
+                { "title": "Cloud Architecture", "description": "AWS / Azure Ecosystem" },
+                { "title": "System Design", "description": "Scalable Microservices" }
+            ]
         }
       },
       "contact": {
@@ -191,6 +255,7 @@
     "navigation": {
       "home": "Trang chủ",
       "about": "Giới thiệu",
+      "skills": "Kỹ năng",
       "projects": "Dự án",
       "education": "Học vấn & Công việc",
       "contact": "Liên hệ"
@@ -236,6 +301,73 @@
           "music": "Nghe nhạc",
           "anime": "Xem anime",
           "gaming": "Chơi game"
+        }
+      },
+      "skills": {
+        "title": "Kỹ năng",
+        "metaTitle": "Kỹ năng - nupniichan",
+        "description": "Đây là trang Kỹ năng. Bạn có thể thể hiện các kỹ năng kỹ thuật và năng lực của mình ở đây.",
+        "header": "Kỹ năng của mình",
+        "headerEmoji": "⚡( •̀ ω •́ )✧",
+        "categories": {
+          "frontend": "Frontend",
+          "backend": "Backend",
+          "database": "Cơ sở dữ liệu",
+          "programming": {
+            "title": "Ngôn ngữ lập trình",
+            "items": ["C#", "JavaScript", "TypeScript", "Python", "HTML", "CSS", "SQL"]
+          },
+          "frameworks": {
+            "title": "Frameworks & Libraries",
+            "items": [".NET", "ASP.NET MVC", "Next.js", "React", "Node.js", "Entity Framework"]
+          },
+          "database_old": {
+            "title": "Cơ sở dữ liệu",
+            "items": ["SQL Server", "MySQL", "PostgreSQL", "MongoDB"]
+          },
+          "tools": {
+            "title": "Công cụ & Công nghệ",
+            "items": ["Git", "Docker", "Visual Studio", "VS Code", "Postman", "Jira"]
+          },
+          "cloud": {
+            "title": "Cloud & Dịch vụ",
+            "items": ["Azure", "AWS", "RESTful API", "SSO", "Email Services"]
+          },
+          "devops": {
+            "title": "DevOps",
+            "items": ["Kubernetes", "CI/CD", "Linux", "Shell Scripting"]
+          }
+        },
+        "tools": {
+            "title": "Công Cụ & Kỹ Năng Khác",
+            "docker": "Containerization & App Management",
+            "linux": "Quản trị hệ thống và server deployment",
+            "git": "Quản lý mã nguồn và phiên bản",
+            "others": "Figma, Unity, Android Studio..."
+        },
+        "languages": {
+            "title": "Ngôn Ngữ",
+            "proficiency": "Độ thông thạo",
+            "vietnamese": {
+                "name": "Tiếng Việt",
+                "description": "Bản địa",
+                "badge1": "Tự nhiên",
+                "badge2": "Thông thạo"
+            },
+            "english": {
+                "name": "Tiếng Anh",
+                "description": "Upper-intermediate",
+                "badge1": "B2",
+                "badge2": "C1"
+            }
+        },
+        "futureLearning": {
+            "title": "Dự định học tập",
+            "items": [
+                { "title": "AI & Machine Learning", "description": "Khám phá Neural Networks" },
+                { "title": "Kiến trúc Cloud", "description": "Hệ sinh thái AWS / Azure" },
+                { "title": "Thiết kế hệ thống", "description": "Microservices quy mô lớn" }
+            ]
         }
       },
       "contact": {

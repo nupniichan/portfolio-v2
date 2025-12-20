@@ -15,7 +15,6 @@ declare global {
 
 export default function ParticlesBackground({ theme }: ParticlesBackgroundProps) {
   useEffect(() => {
-    // Load particles.js script dynamically
     const loadParticlesJS = () => {
       return new Promise<void>((resolve) => {
         if (window.particlesJS) {

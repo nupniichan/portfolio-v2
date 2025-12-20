@@ -90,10 +90,6 @@ export default function Home() {
                 height={224}
                 priority
               />
-
-              <div className="absolute bottom-1 right-1 sm:bottom-2 sm:right-2 w-6 h-6 sm:w-8 sm:h-8 bg-[#CCCCFF] rounded-sm rotate-12 flex items-center justify-center shadow-lg z-20">
-                <span className="text-[8px] sm:text-[10px] text-[#05050a] font-black uppercase">NUP</span>
-              </div>
             </div>
             
             <span 

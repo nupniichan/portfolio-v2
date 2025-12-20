@@ -53,11 +53,29 @@ export default function EducationWorkPage() {
   return (
     <>
       <MetadataUpdater pageKey="education" />
-      <div className="flex min-h-screen items-center justify-center p-2 sm:p-6 md:p-8 lg:p-12">
-        <div className="w-full max-w-[95%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] xl:max-w-[70%] 2xl:max-w-[1100px] relative">
+      <div className="flex min-h-screen items-center justify-center p-2 sm:p-6 md:p-8 lg:p-12 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-20 left-16 w-32 h-32 bg-[#CCCCFF]/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: '0s', animationDuration: '5s' }}></div>
+          <div className="absolute bottom-32 right-20 w-28 h-28 bg-[#CCCCFF]/6 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s', animationDuration: '6s' }}></div>
+          <div className="absolute top-1/2 left-1/3 w-20 h-20 bg-[#CCCCFF]/4 rounded-full blur-lg animate-pulse" style={{ animationDelay: '3.5s', animationDuration: '4s' }}></div>
+          <div className="absolute top-1/3 right-1/4 w-16 h-16 border-2 border-[#CCCCFF]/15 rotate-45 animate-spin-slow"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-12 h-12 bg-[#CCCCFF]/8 rotate-12 animate-spin-reverse" style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}></div>
+          <div className="absolute top-1/4 left-1/2 w-22 h-22 bg-linear-to-br from-[#CCCCFF]/8 to-transparent rounded-full blur-md animate-floating"></div>
+          <div className="absolute bottom-1/3 right-1/3 w-30 h-30 bg-linear-to-tl from-[#CCCCFF]/6 to-transparent rounded-full blur-lg" style={{ animation: 'floating 8s ease-in-out infinite', animationDelay: '1.5s' }}></div>
+        </div>
+
+        <div className="w-full max-w-[95%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] xl:max-w-[70%] 2xl:max-w-[1100px] relative z-10">
           <div className="floating-container animate-fade-in-up relative">
             <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#CCCCFF]/30 -translate-x-2 -translate-y-2"></div>
             <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#CCCCFF]/30 translate-x-2 translate-y-2"></div>
+            
+            <div className="absolute top-4 right-4 w-3 h-3 border border-[#CCCCFF]/20 rotate-45"></div>
+            <div className="absolute bottom-4 left-4 w-3 h-3 border border-[#CCCCFF]/20 rotate-45"></div>
+            <div className="absolute top-0 right-0 w-2 h-2 bg-[#CCCCFF]/30"></div>
+            <div className="absolute bottom-0 left-0 w-2 h-2 bg-[#CCCCFF]/30"></div>
+            
+            <div className="absolute top-1/2 left-0 w-1 h-28 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent -translate-x-4"></div>
+            <div className="absolute top-1/2 right-0 w-1 h-28 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent translate-x-4"></div>
             
             <div className="p-3 sm:p-5 md:p-6 lg:p-8">
               <div 
@@ -96,6 +114,9 @@ export default function EducationWorkPage() {
 
                         <div className="group relative bg-white/5 border border-white/10 p-4 sm:p-5 transition-all duration-300 hover:border-[#CCCCFF]/30 hover:bg-white/10">
                           <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#CCCCFF]/20 group-hover:border-[#CCCCFF]/60 transition-colors"></div>
+                          <div className="absolute top-2 left-2 w-1.5 h-1.5 bg-[#CCCCFF]/30 rounded-full animate-pulse" style={{ animationDelay: `${index * 0.2}s` }}></div>
+                          <div className="absolute bottom-2 right-2 w-1 h-1 bg-[#CCCCFF]/40 rounded-full"></div>
+                          <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-[#CCCCFF]/20"></div>
                           
                           <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
                             <span className="text-[10px] uppercase tracking-[0.2em] text-[#CCCCFF] font-bold flex items-center gap-2">
@@ -152,6 +173,10 @@ export default function EducationWorkPage() {
                   >
                     <div className="absolute top-[-20px] right-[-20px] w-24 h-24 bg-[#CCCCFF]/5 rounded-full blur-2xl group-hover:bg-[#CCCCFF]/10 transition-all duration-700"></div>
                     
+                    <div className="absolute top-4 left-4 w-2 h-2 border border-[#CCCCFF]/20 rotate-45"></div>
+                    <div className="absolute bottom-4 right-4 w-1.5 h-1.5 bg-[#CCCCFF]/30 rounded-full"></div>
+                    <div className="absolute top-1/2 left-0 w-0.5 h-12 bg-linear-to-b from-transparent via-[#CCCCFF]/10 to-transparent"></div>
+                    
                     <div className="flex items-center gap-3 mb-4 md:mb-6 relative">
                       <div className="w-1.5 h-1.5 bg-[#CCCCFF] rotate-45"></div>
                       <h3 className="text-[10px] sm:text-xs font-bold text-white tracking-[0.2em] uppercase flex items-center gap-2">
@@ -200,6 +225,10 @@ export default function EducationWorkPage() {
                     data-aos="fade-up"
                   >
                     <div className="absolute top-[-20px] left-[-20px] w-24 h-24 bg-[#CCCCFF]/5 rounded-full blur-2xl group-hover:bg-[#CCCCFF]/10 transition-all duration-700"></div>
+                    
+                    <div className="absolute top-4 right-4 w-2 h-2 border border-[#CCCCFF]/20 rotate-45"></div>
+                    <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-[#CCCCFF]/30 rounded-full"></div>
+                    <div className="absolute top-1/2 right-0 w-0.5 h-12 bg-linear-to-b from-transparent via-[#CCCCFF]/10 to-transparent"></div>
                     
                     <div className="flex items-center gap-3 mb-4 md:mb-6 relative">
                       <div className="w-1.5 h-1.5 bg-[#CCCCFF] rotate-45"></div>

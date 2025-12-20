@@ -5,7 +5,7 @@ import { useThemeLanguage } from "./ThemeLanguageProvider";
 import { useTranslations } from "../hooks/useTranslations";
 
 interface MetadataUpdaterProps {
-  pageKey: "home" | "about" | "projects" | "education" | "contact";
+  pageKey: "home" | "about" | "skills" | "projects" | "education" | "contact";
 }
 
 export default function MetadataUpdater({ pageKey }: MetadataUpdaterProps) {
@@ -23,10 +23,7 @@ export default function MetadataUpdater({ pageKey }: MetadataUpdaterProps) {
     const title = t(metaTitleKey);
     const description = t(descriptionKey);
 
-    // Update document title
     document.title = title;
-
-    // Update or create meta description
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
       metaDescription = document.createElement("meta");
@@ -35,7 +32,6 @@ export default function MetadataUpdater({ pageKey }: MetadataUpdaterProps) {
     }
     metaDescription.setAttribute("content", description);
 
-    // Update or create og:title
     let ogTitle = document.querySelector('meta[property="og:title"]');
     if (!ogTitle) {
       ogTitle = document.createElement("meta");
@@ -44,7 +40,6 @@ export default function MetadataUpdater({ pageKey }: MetadataUpdaterProps) {
     }
     ogTitle.setAttribute("content", title);
 
-    // Update or create og:description
     let ogDescription = document.querySelector('meta[property="og:description"]');
     if (!ogDescription) {
       ogDescription = document.createElement("meta");
@@ -53,7 +48,6 @@ export default function MetadataUpdater({ pageKey }: MetadataUpdaterProps) {
     }
     ogDescription.setAttribute("content", description);
 
-    // Update html lang attribute
     document.documentElement.setAttribute("lang", language);
   }, [language, mounted, pageKey, t]);
 

@@ -355,3 +355,53 @@ body {
 [data-aos].aos-animate .about-header h1::after {
   width: 100px;
 }
+
+.card-particles-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.card-particle {
+  position: absolute;
+  background: rgba(204, 204, 255, 0.2);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.4;
+  animation: particle-gentle ease-in-out infinite;
+  will-change: transform, opacity;
+  filter: blur(0.5px);
+}
+
+@keyframes particle-gentle {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translate(
+      calc(var(--particle-x, 0) * 0.5px),
+      calc(var(--particle-y, 0) * 0.5px)
+    ) scale(1.1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(
+      calc(var(--particle-x, 0) * 1px),
+      calc(var(--particle-y, 0) * 1px)
+    ) scale(0.95);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translate(
+      calc(var(--particle-x, 0) * 0.7px),
+      calc(var(--particle-y, 0) * 0.7px)
+    ) scale(1.05);
+    opacity: 0.45;
+  }
+}
+
+
