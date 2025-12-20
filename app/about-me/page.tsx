@@ -64,7 +64,7 @@ export default function AboutMePage() {
                       <div className="relative w-32 h-32 md:w-36 md:h-36 flex items-center justify-center group">
                         <div className="absolute inset-0 rounded-full border border-dashed border-[#CCCCFF]/30 animate-[spin_20s_linear_infinite]"></div>
                         
-                        <div className="absolute inset-2 rounded-full border-t border-b border-[#CCCCFF]/60 animate-[spin_8s_linear_infinite]"></div>
+                        <div className="absolute inset-2 rounded-full border-t border-b border-[#CCCCFF]/60 animate-spin-reverse"></div>
                         
                         <div className="absolute inset-4 rounded-full bg-[#CCCCFF]/10 blur-xl animate-pulse"></div>
                         
