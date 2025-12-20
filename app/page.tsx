@@ -45,7 +45,6 @@ export default function Home() {
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <span className="w-4 h-px bg-[#CCCCFF] hidden md:block"></span>
               {t('home.greeting')}
             </div>
             <div 

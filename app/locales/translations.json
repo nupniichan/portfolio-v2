@@ -68,7 +68,49 @@
       "projects": {
         "title": "Projects",
         "metaTitle": "Projects - nupniichan",
-        "description": "This is the Projects page. You can showcase your personal and professional projects here."
+        "description": "One of the highlight projects developed and posted on github",
+        "header": "My Projects",
+        "headerEmoji": "ヾ(￣▽￣)",
+        "items": {
+          "chinokafuu": {
+            "title": "Chino Kafuu Discord Bot",
+            "description": "Employee at CafeDeNup developed using C# and Python",
+            "tags": ["C#", "Python", "Discord", ".NET"]
+          },
+          "website-ban-linh-kien": {
+            "title": "Parts Sales Website",
+            "description": "A parts sales website developed with C# along with modern frameworks",
+            "tags": ["C#", "HTML", "JavaScript", ".NET"]
+          },
+          "cs-anilist": {
+            "title": "CS-AniList API",
+            "description": "A C# wrapper for the AniList API, helping you get anime and manga information from Anilist for use in .NET applications.",
+            "tags": ["C#", "API", ".NET", "Library"]
+          },
+          "cs-owm": {
+            "title": "CS-OWM",
+            "description": "A C# wrapper for the OpenWeatherMap API, providing easy access to real-time weather data in .NET applications.",
+            "tags": ["C#", "API", "Weather", "Library"]
+          },
+          "csteam-works": {
+            "title": "CSteam-Works",
+            "description": "A C# wrapper for the Steam API, allowing you to fetch simple steam data for use in .NET applications.",
+            "tags": ["C#", "Steam", "API", "Gaming"]
+          },
+          "profile-page": {
+            "title": "Profile Page",
+            "description": "My personal website developed entirely using HTML, CSS, and JavaScript",
+            "tags": ["HTML", "CSS", "JavaScript", "Portfolio"]
+          }
+        },
+        "moreProjects": "And other projects at my",
+        "moreProjectsLink": "Github",
+        "moreProjectsEmoji": "( • ⩊ • )",
+        "details": {
+          "description": "Description",
+          "viewRepo": "View Repository",
+          "viewNuget": "NuGet Package"
+        }
       }
     },
     "loading": "Wait a sec ( •̀ ω •́ )✧"
@@ -142,7 +184,49 @@
       "projects": {
         "title": "Dự án",
         "metaTitle": "Dự án - nupniichan",
-        "description": "Đây là trang Dự án. Bạn có thể giới thiệu các dự án cá nhân và chuyên nghiệp ở đây."
+        "description": "Một số dự án nổi bật được mình làm và đăng tải lên github",
+        "header": "Dự án của mình",
+        "headerEmoji": "ヾ(￣▽￣)",
+        "items": {
+          "chinokafuu": {
+            "title": "Chino Kafuu Discord Bot",
+            "description": "Nhân viên tại CafeDeNup được phát triển bằng C# và Python",
+            "tags": ["C#", "Python", "Discord", ".NET"]
+          },
+          "website-ban-linh-kien": {
+            "title": "Website bán linh kiện",
+            "description": "Một trang web bán linh kiện được phát triển bằng C# cùng với các framework hiện đại",
+            "tags": ["C#", "HTML", "JavaScript", ".NET"]
+          },
+          "cs-anilist": {
+            "title": "CS-AniList API",
+            "description": "Một wrapper C# cho API AniList, giúp bạn lấy thông tin anime và manga từ Anilist và sử dụng trong các ứng dụng .NET.",
+            "tags": ["C#", "API", ".NET", "Library"]
+          },
+          "cs-owm": {
+            "title": "CS-OWM",
+            "description": "Một wrapper C# cho API OpenWeatherMap, cung cấp dễ dàng truy cập dữ liệu thời tiết ( realtime ) trong các ứng dụng .NET.",
+            "tags": ["C#", "API", "Weather", "Library"]
+          },
+          "csteam-works": {
+            "title": "CSteam-Works",
+            "description": "Một wrapper C# cho API Steam, cho phép bạn lấy các data đơn giản từ steam về và sử dụng trong các ứng dụng .NET.",
+            "tags": ["C#", "Steam", "API", "Gaming"]
+          },
+          "profile-page": {
+            "title": "Profile Page",
+            "description": "Trang web cá nhân được của mình được phát triển hoàn toàn bằng HTML, CSS và JavaScript",
+            "tags": ["HTML", "CSS", "JavaScript", "Portfolio"]
+          }
+        },
+        "moreProjects": "Và các dự án khác tại",
+        "moreProjectsLink": "Github",
+        "moreProjectsEmoji": "( • ⩊ • )",
+        "details": {
+          "description": "Chi tiết dự án",
+          "viewRepo": "Xem ở Github",
+          "viewNuget": "Xem ở NuGet"
+        }
       }
     },
     "loading": "Chờ xíu nghen ( •̀ ω •́ )✧"
