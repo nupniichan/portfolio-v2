@@ -5,18 +5,18 @@ import Image from "next/image";
 import Typewriter from "./components/Typewriter";
 import SocialLinks from "./components/SocialLinks";
 import { useTranslations } from "./hooks/useTranslations";
+import MetadataUpdater from "./components/MetadataUpdater";
 
 export default function Home() {
   const { t } = useTranslations();
 
   return (
-    <div className="flex min-h-screen items-center justify-center p-2 sm:p-3 md:p-4 lg:p-6">
+    <>
+      <MetadataUpdater pageKey="home" />
+      <div className="flex min-h-screen items-center justify-center p-2 sm:p-3 md:p-4 lg:p-6">
       <div className="w-full max-w-[95%] sm:max-w-[80%] md:max-w-[75%] lg:max-w-[70%] xl:max-w-[60%] floating-container max-sm:[animation:none]">
         <div className="flex flex-col md:flex-row items-center p-2.5 md:p-4 lg:p-6">
-          <div className="w-full md:w-1/2 flex flex-col justify-start items-center md:items-start space-y-1 md:space-y-2 order-2 md:order-1">
-            <div className="text-center md:text-left md:mt-0 text-lg md:text-xl lg:text-2xl font-extrabold text-white text-stroke animate-slide-up">
-              Quốc Bảo
-            </div>
+          <div className="w-full md:w-1/2 flex flex-col justify-start items-center md:items-start space-y-1 md:space-y-2 order-2 md:order-1 mt-2">
             <div className="text-center md:text-left text-sm md:text-base lg:text-lg font-bold text-white text-stroke animate-slide-up delay-100">
               {t('home.greeting')}
             </div>
@@ -59,5 +59,6 @@ export default function Home() {
         </div>
       </div>
     </div>
+    </>
   );
 }
