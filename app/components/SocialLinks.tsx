@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { withBasePath } from "../utils/paths";
 
 export default function SocialLinks() {
   return (
@@ -11,7 +12,7 @@ export default function SocialLinks() {
         className="flex h-8 w-8 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
       >
         <Image
-          src="/Images/SocialMedia/facebook.png"
+          src={withBasePath("/Images/SocialMedia/facebook.png")}
           alt="Facebook"
           width={16}
           height={16}
@@ -25,7 +26,7 @@ export default function SocialLinks() {
         className="flex h-8 w-8 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
       >
         <Image
-          src="/Images/SocialMedia/github.png"
+          src={withBasePath("/Images/SocialMedia/github.png")}
           alt="GitHub"
           width={16}
           height={16}
@@ -39,7 +40,7 @@ export default function SocialLinks() {
         className="flex h-8 w-8 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
       >
         <Image
-          src="/Images/SocialMedia/youtube.png"
+          src={withBasePath("/Images/SocialMedia/youtube.png")}
           alt="YouTube"
           width={16}
           height={16}
@@ -53,7 +54,7 @@ export default function SocialLinks() {
         className="flex h-8 w-8 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
       >
         <Image
-          src="/Images/SocialMedia/discord.png"
+          src={withBasePath("/Images/SocialMedia/discord.png")}
           alt="Discord"
           width={16}
           height={16}
@@ -67,7 +68,7 @@ export default function SocialLinks() {
         className="flex h-8 w-8 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
       >
         <Image
-          src="/Images/SocialMedia/Anilist.png"
+          src={withBasePath("/Images/SocialMedia/Anilist.png")}
           alt="Anilist"
           width={16}
           height={16}
@@ -81,7 +82,7 @@ export default function SocialLinks() {
         className="flex h-8 w-8 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
       >
         <Image
-          src="/Images/SocialMedia/linkedin.png"
+          src={withBasePath("/Images/SocialMedia/linkedin.png")}
           alt="LinkedIn"
           width={16}
           height={16}

@@ -6,6 +6,7 @@ import Typewriter from "./components/Typewriter";
 import SocialLinks from "./components/SocialLinks";
 import { useTranslations } from "./hooks/useTranslations";
 import MetadataUpdater from "./components/MetadataUpdater";
+import { withBasePath } from "./utils/paths";
 
 export default function Home() {
   const { t } = useTranslations();
@@ -84,7 +85,7 @@ export default function Home() {
               
               <Image
                 className="rounded-full w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 object-cover transition-all duration-300 relative z-10 border-2 border-white/10"
-                src="/Images/Avatar/ChinoKafuu.png"
+                src={withBasePath("/Images/Avatar/ChinoKafuu.png")}
                 alt="Avatar"
                 width={224}
                 height={224}

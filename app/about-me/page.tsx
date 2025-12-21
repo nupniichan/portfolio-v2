@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useTranslations } from "../hooks/useTranslations";
 import MetadataUpdater from "../components/MetadataUpdater";
 import { Code, Music, Tv, Gamepad2 } from "lucide-react";
+import { withBasePath } from "../utils/paths";
 
 export default function AboutMePage() {
   const { t } = useTranslations();
@@ -91,7 +92,7 @@ export default function AboutMePage() {
                         
                         <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden p-1 border border-white/10 bg-[#CCCCFF] z-10 flex items-center justify-center">
                           <Image
-                            src="/Images/Avatar/avatar2.png"
+                            src={withBasePath("/Images/Avatar/avatar2.png")}
                             alt="Profile Picture"
                             fill
                             className="rounded-full object-cover p-1"

@@ -23,13 +23,12 @@ const THEME_STORAGE_KEY = "portfolio-theme";
 const LANGUAGE_STORAGE_KEY = "portfolio-language";
 
 function getPreferredTheme(): ThemeMode {
-  if (typeof window === "undefined") return "dark";
+  if (typeof window === "undefined") return "light";
 
   const stored = window.localStorage.getItem(THEME_STORAGE_KEY) as ThemeMode | null;
   if (stored === "light" || stored === "dark") return stored;
 
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  return prefersDark ? "dark" : "light";
+  return "light";
 }
 
 function getPreferredLanguage(): LanguageCode {
@@ -40,8 +39,7 @@ function getPreferredLanguage(): LanguageCode {
     | null;
   if (stored === "en" || stored === "vi") return stored;
 
-  const browserLang = window.navigator.language.toLowerCase();
-  return browserLang.startsWith("en") ? "en" : "vi";
+  return "vi";
 }
 
 function applyThemeClass(theme: ThemeMode) {
@@ -54,7 +52,7 @@ function applyThemeClass(theme: ThemeMode) {
 
 export function ThemeLanguageProvider({ children }: { children: ReactNode }) {
   const [mounted, setMounted] = useState(false);
-  const [theme, setTheme] = useState<ThemeMode>("dark");
+  const [theme, setTheme] = useState<ThemeMode>("light");
   const [language, setLanguage] = useState<LanguageCode>("vi");
   const [isLoading, setIsLoading] = useState(true);
 

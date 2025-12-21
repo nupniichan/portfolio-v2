@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   title: "nupniichan",
   description: "Portfolio of nupniichan - Full Stack Developer",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: withBasePath("/favicon.ico"),
+    shortcut: withBasePath("/favicon.ico"),
+    apple: withBasePath("/favicon.ico"),
   },
 };
 
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="vi">
       <body className={`${notoSans.className} min-h-screen flex flex-col`}>
         <ThemeLanguageProvider>
           <LayoutContent>{children}</LayoutContent>
