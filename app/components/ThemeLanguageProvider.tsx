@@ -58,13 +58,26 @@ export function ThemeLanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     setMounted(true);
-    setTheme(getPreferredTheme());
-    setLanguage(getPreferredLanguage());
+    const preferredTheme = getPreferredTheme();
+    const preferredLanguage = getPreferredLanguage();
+    setTheme(preferredTheme);
+    setLanguage(preferredLanguage);
     
-    const timer = setTimeout(() => {
+    const hasLoadedBefore = typeof window !== "undefined" && 
+      window.sessionStorage.getItem("portfolio-initial-load") === "true";
+    
+    if (hasLoadedBefore) {
       setIsLoading(false);
-    }, 1500);
-    return () => clearTimeout(timer);
+    } else {
+      // First load, show loading overlay
+      if (typeof window !== "undefined") {
+        window.sessionStorage.setItem("portfolio-initial-load", "true");
+      }
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 1500);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   useEffect(() => {
