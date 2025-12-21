@@ -6,6 +6,7 @@ import Header from "./Header";
 import ClientAudioPlayer from "./ClientAudioPlayer";
 import LoadingOverlay from "./LoadingOverlay";
 import AOSInit from "./AOSInit";
+import ScrollToTop from "./ScrollToTop";
 import { withBasePath } from "../utils/paths";
 
 interface LayoutContentProps {
@@ -37,10 +38,11 @@ export default function LayoutContent({ children }: LayoutContentProps) {
 
       <Header />
 
-      <main className="relative z-10 flex-1 flex flex-col justify-center pt-10">
+      <main className="relative z-10 flex-1 flex flex-col justify-center">
         {children}
       </main>
 
+      <ScrollToTop />
       <ClientAudioPlayer />
     </div>
   );
