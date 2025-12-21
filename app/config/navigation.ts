@@ -1,6 +1,12 @@
-import translations from "../locales/translations.json";
+import enTranslations from "../locales/en.json";
+import viTranslations from "../locales/vi.json";
 
-export type NavKey = "home" | "about" | "skills" | "projects" | "education" | "contact";
+const translations = {
+  en: enTranslations,
+  vi: viTranslations,
+};
+
+export type NavKey = "home" | "about" | "skills" | "projects" | "journey" | "contact";
 
 export type NavigationItem = {
   href: string;
@@ -12,7 +18,7 @@ export const NAV_ITEMS: readonly NavigationItem[] = [
   { href: "/about-me", key: "about" },
   { href: "/skills", key: "skills" },
   { href: "/projects", key: "projects" },
-  { href: "/education-work", key: "education" },
+  { href: "/journey", key: "journey" },
   { href: "/contact", key: "contact" },
 ];
 

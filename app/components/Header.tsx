@@ -34,7 +34,7 @@ export default function Header() {
                     : "text-gray-200/80 hover:text-white"
                 }`}
               >
-                <span>{navLabels[item.key]}</span>
+                <span>{navLabels[item.key as keyof typeof navLabels]}</span>
                 <span
                   className={`pointer-events-none absolute inset-x-0.5 bottom-0 h-0.5 rounded-full bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 transition-all duration-200 origin-center ${
                     isActive

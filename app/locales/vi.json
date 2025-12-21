@@ -1,0 +1,273 @@
+{
+  "home": {
+    "greeting": "Chào cậu, mình là Nguyễn Phi Quốc Bảo",
+    "connect": "Kết nối với mình nhé ⸜(｡˃ ᵕ ˂ )⸝♡",
+    "status": "Đang hoạt động"
+  },
+  "navigation": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "skills": "Kỹ năng",
+    "projects": "Dự án",
+    "journey": "Hành trình",
+    "contact": "Liên hệ"
+  },
+  "header": {
+    "theme": {
+      "dark": "Tối",
+      "light": "Sáng"
+    },
+    "language": {
+      "en": "EN",
+      "vi": "VI"
+    }
+  },
+  "typewriter": {
+    "messages": [
+      "Rất vui được gặp cậu (≧∇≦)/",
+      "は じ め ま し て (≧∇≦)/",
+      "Nice to meet you (≧∇≦)/"
+    ]
+  },
+  "pages": {
+    "home": {
+      "title": "Trang chủ - nupniichan",
+      "description": "Portfolio của nupniichan - Full Stack Developer"
+    },
+    "about": {
+      "title": "Giới thiệu",
+      "metaTitle": "Giới thiệu - nupniichan",
+      "header": "Một chút về mình",
+      "headerEmoji": "ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧",
+      "profileName": "Nguyễn Phi Quốc Bảo",
+      "profileTitle": "nupniichan",
+      "introTitle": "Giới thiệu",
+      "intro": [
+        "Mình là Nguyễn Phi Quốc Bảo, một người đam mê lập trình và thiết kế, đặc biệt là sáng tạo ra các phần mềm / chức năng độc đáo và áp dụng công nghệ AI vào project của mình.",
+        "Thời gian rảnh mình thường kiếm cái gì đó mới để học / tìm hiểu để có thể tạo những gì mình thích từ việc lập trình, đồng thời nâng cao kiến thức của bản thân.",
+        "Ngoài ra mình cũng thích xem anime, nghe nhạc và chơi các tựa game nhẹ đó. Bạn có muốn tham gia cùng mình không? (´• ω •)ﾉ"
+      ],
+      "interestsTitle": "Sở thích",
+      "interests": {
+        "programming": "Lập trình",
+        "music": "Nghe nhạc",
+        "anime": "Xem anime",
+        "gaming": "Chơi game"
+      }
+    },
+    "skills": {
+      "title": "Kỹ năng",
+      "metaTitle": "Kỹ năng - nupniichan",
+      "description": "Đây là trang Kỹ năng. Bạn có thể thể hiện các kỹ năng kỹ thuật và năng lực của mình ở đây.",
+      "header": "Kỹ năng của mình",
+      "headerEmoji": "( •̀ ω •́ )✧",
+      "categories": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "database": "Cơ sở dữ liệu",
+        "programming": {
+          "title": "Ngôn ngữ lập trình",
+          "items": ["C#", "JavaScript", "TypeScript", "Python", "HTML", "CSS", "SQL"]
+        },
+        "frameworks": {
+          "title": "Frameworks & Libraries",
+          "items": [".NET", "ASP.NET MVC", "Next.js", "React", "Node.js", "Entity Framework"]
+        },
+        "tools": {
+          "title": "Công cụ & Công nghệ",
+          "items": ["Git", "Docker", "Visual Studio", "VS Code", "Postman", "Jira"]
+        },
+        "cloud": {
+          "title": "Cloud & Dịch vụ",
+          "items": ["Azure", "AWS", "RESTful API", "SSO", "Email Services"]
+        },
+        "devops": {
+          "title": "DevOps",
+          "items": ["Kubernetes", "CI/CD", "Linux", "Shell Scripting"]
+        }
+      },
+      "toolDetails": {
+        "title": "Công Cụ & Kỹ Năng Khác",
+        "docker": "Containerization & App Management",
+        "linux": "Quản trị hệ thống và server deployment",
+        "git": "Quản lý mã nguồn và phiên bản",
+        "others": "Figma, Unity, Android Studio..."
+      },
+      "languages": {
+        "title": "Ngôn Ngữ",
+        "proficiency": "Độ thông thạo",
+        "vietnamese": {
+          "name": "Tiếng Việt",
+          "description": "Bản địa",
+          "badge1": "Tự nhiên",
+          "badge2": "Thông thạo"
+        },
+        "english": {
+          "name": "Tiếng Anh",
+          "description": "Intermediate / Upper-intermediate",
+          "badge1": "B1",
+          "badge2": "B2"
+        }
+      },
+      "futureLearning": {
+        "title": "Dự định học tập",
+        "items": [
+          { "title": "AI & Machine Learning", "description": "Học và khám phá cách tạo ra AI" },
+          { "title": "Cloud Architecture", "description": "Hệ sinh thái AWS / Azure" },
+          { "title": "DevOps", "description": "DevOps Tools & CI/CD" }
+        ]
+      }
+    },
+    "projects": {
+      "title": "Dự án",
+      "metaTitle": "Dự án - nupniichan",
+      "description": "Một số dự án nổi bật được mình làm và đăng tải lên github",
+      "header": "Dự án của mình",
+      "headerEmoji": "ヾ(￣▽￣)",
+      "items": {
+        "chinokafuu": {
+          "title": "Chino Kafuu Discord Bot",
+          "description": "Nhân viên dễ thương tại server discord CafeDeNup của mình được phát triển bằng C# và Python.",
+          "tags": ["C#", "Python", "Discord", ".NET"]
+        },
+        "website-ban-linh-kien": {
+          "title": "Website bán linh kiện",
+          "description": "Một trang web bán linh kiện được phát triển bằng C# cùng với các framework hiện đại với nhiều tính năng hay ho.",
+          "tags": ["C#", "HTML", "JavaScript", ".NET"]
+        },
+        "cs-anilist": {
+          "title": "CS-AniList API",
+          "description": "Một wrapper C# cho API AniList, giúp bạn lấy thông tin anime và manga từ Anilist và sử dụng trong các ứng dụng .NET.",
+          "tags": ["C#", "API", ".NET", "Library"]
+        },
+        "cs-owm": {
+          "title": "CS-OWM",
+          "description": "Một wrapper C# cho API OpenWeatherMap, cung cấp dễ dàng truy cập dữ liệu thời tiết ( realtime ) trong các ứng dụng .NET.",
+          "tags": ["C#", "API", "Weather", "Library"]
+        },
+        "csteam-works": {
+          "title": "CSteam-Works",
+          "description": "Một wrapper C# cho API Steam, cho phép bạn lấy các data đơn giản từ steam về và sử dụng trong các ứng dụng .NET.",
+          "tags": ["C#", "Steam", "API", "Gaming"]
+        },
+        "profile-page": {
+          "title": "Profile Page",
+          "description": "Trang web cá nhân được của mình được nâng cấp và phát triển bằng Next.js và Tailwind CSS",
+          "tags": ["Next.js", "Tailwind CSS", "Portfolio"]
+        }
+      },
+      "moreProjects": "Và các dự án khác tại",
+      "moreProjectsLink": "Github của mình",
+      "moreProjectsEmoji": "( • ⩊ • )",
+      "details": {
+        "description": "Chi tiết dự án",
+        "viewRepo": "Xem ở Github",
+        "viewNuget": "Xem ở NuGet"
+      }
+    },
+    "journey": {
+      "title": "Hành trình",
+      "metaTitle": "Hành trình - nupniichan",
+      "header": "Hành trình của mình",
+      "headerEmoji": "୧⁠(⁠ ⁠°⁠ᗜ⁠°⁠ ⁠)⁠୨",
+      "timelineTitle": "Hành trình của mình",
+      "achievementsTitle": "Thành tựu",
+      "description": "Thông tin chi tiết về quá trình học tập và làm việc của mình",
+      "items": {
+        "work": {
+          "date": "Tháng 7 2025 – Hiện tại",
+          "title": "Thực tập sinh Chuyển đổi số",
+          "subtitle": "Schneider Electric Manufacturing Vietnam",
+          "description": "Mình may mắn có được công việc thực tập tại Schneider Electric với vai trò Full-stack Developer chính cho công cụ nội bộ Global Supply Chain sử dụng ASP.NET MVC. Chịu trách nhiệm thiết kế database, triển khai SSO cho xác thực bảo mật, setup tự động gửi mail cho người dùng, xây dựng hệ thống Project Tracker và tối ưu hóa hệ để đảm bảo tính ổn định cho người dùng trong nước và khu vực.",
+          "role": "Full-stack Developer"
+        },
+        "university": {
+          "date": "2022 - Tháng 1 2026 ( Dự kiến )",
+          "title": "Công nghệ phần mềm",
+          "subtitle": "Trường Đại học Ngoại ngữ – Tin học TP.HCM",
+          "description": "Hiện tại mình đang học chuyên ngành Công nghệ phần mềm với trọng tâm về Phát triển ứng dụng và Kỹ thuật phần mềm cũng như các kỹ năng quản lý nhóm. GPA hiện tại của mình ở mức 3.7 / 4.0",
+          "achievement1": "Kết quả học tập >= 3.5 mỗi kỳ",
+          "achievement2": "Dự án xuất sắc nhất"
+        },
+        "highschool": {
+          "date": "2019 - 2022",
+          "title": "Bằng tốt nghiệp THPT",
+          "subtitle": "Trường THPT Nguyễn Tất Thành",
+          "description": "Một ngôi trường vinh dự mang tên Bác Hồ kính yêu – một vị lãnh tụ vĩ đại của dân tộc Việt Nam. Mình tự hào khi được học và tốt nghiệp tại ngôi trường này",
+          "achievement": "Học sinh giỏi"
+        }
+      },
+      "certifications": {
+        "devops": {
+          "title": "Chứng chỉ DevOps cho người mới bắt đầu",
+          "issuer": "devopsedu.vn",
+          "date": "2024"
+        },
+        "csharp": {
+          "title": "Chứng chỉ C# cơ bản",
+          "issuer": "HackerRank",
+          "date": "2023"
+        },
+        "problem_solving": {
+          "title": "4★ Giải quyết vấn đề",
+          "issuer": "HackerRank",
+          "date": "2023"
+        },
+        "kubernetes": {
+          "title": "Kubernetes thực tế",
+          "issuer": "devopsedu.vn",
+          "date": "Đang học..."
+        },
+        "leetcode": {
+          "title": "DSA Leetcode",
+          "issuer": "Leetcode",
+          "date": "Đang giải..."
+        }
+      },
+      "futureLearning": {
+        "title": "Dự định học tập",
+        "items": {
+          "ai": {
+            "title": "AI & Machine Learning",
+            "subtitle": "Khám phá cách AI hoạt động và cách sử dụng nó trong các dự án của mình"
+          },
+          "cloud": {
+            "title": "Cloud Architecture",
+            "subtitle": "Hệ sinh thái thuộc AWS / Azure"
+          },
+          "system": {
+            "title": "Thiết kế hệ thống",
+            "subtitle": "Học về các hệ thống có khả năng mở rộng"
+          }
+        }
+      }
+    },
+    "contact": {
+      "title": "Liên hệ",
+      "metaTitle": "Liên hệ - nupniichan",
+      "description": "Cảm ơn bạn đã ghé thăm trang web của mình. Nếu bạn muốn liên hệ, hãy sử dụng các thông tin bên dưới nhé!",
+      "header": "Liên Hệ",
+      "headerEmoji": "ヽ(・∀・)ﾉ",
+      "welcomeText": "Cảm ơn bạn đã ghé thăm trang web của mình. Nếu bạn muốn liên hệ, hãy sử dụng các thông tin bên dưới nhé!",
+      "email": {
+        "title": "Email",
+        "address": "bao96065@gmail.com",
+        "action": "Gửi email cho mình"
+      },
+      "telegram": {
+        "title": "Telegram / Zalo",
+        "description": "Kết nối với mình qua mã QR",
+        "telegramButton": "Telegram",
+        "zaloButton": "Zalo",
+        "telegramQrTitle": "Mã QR Telegram",
+        "zaloQrTitle": "Mã QR Zalo"
+      },
+      "home": {
+        "title": "Quay về trang chủ",
+        "description": "Xem thêm thông tin về các trang mạng xã hội của mình",
+        "action": "Về trang chủ"
+      }
+    }
+  },
+  "loading": "Chờ xíu nghen ( •̀ ω •́ )✧"
+}

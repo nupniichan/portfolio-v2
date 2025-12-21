@@ -1,5 +1,11 @@
 import { useThemeLanguage } from "../components/ThemeLanguageProvider";
-import translations from "../locales/translations.json";
+import enTranslations from "../locales/en.json";
+import viTranslations from "../locales/vi.json";
+
+const translations = {
+  en: enTranslations,
+  vi: viTranslations,
+};
 
 export function useTranslations() {
   const { language, mounted } = useThemeLanguage();

@@ -89,7 +89,7 @@ export default function EducationWorkPage() {
           }
         }
       `}} />
-      <MetadataUpdater pageKey="education" />
+      <MetadataUpdater pageKey="journey" />
       <div className="flex min-h-screen items-center justify-center p-2 sm:p-6 md:p-8 lg:p-12 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute top-20 left-16 w-32 h-32 bg-[#CCCCFF]/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: '0s', animationDuration: '5s' }}></div>
@@ -122,8 +122,8 @@ export default function EducationWorkPage() {
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                   <h1 className="text-[13px] sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-white text-stroke flex items-center gap-1 sm:gap-3 whitespace-nowrap">
                     <GraduationCap className="text-[#CCCCFF] animate-pulse w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8" />
-                    {t('pages.education.header')} 
-                    <span className="animate-kaomoji ml-1 sm:ml-2 inline-block text-[11px] sm:text-lg md:text-xl">{t('pages.education.headerEmoji')}</span>
+                    {t('pages.journey.header')} 
+                    <span className="animate-kaomoji ml-1 sm:ml-2 inline-block text-[11px] sm:text-lg md:text-xl">{t('pages.journey.headerEmoji')}</span>
                   </h1>
                 </div>
               </div>
@@ -132,7 +132,7 @@ export default function EducationWorkPage() {
                 <div className="lg:col-span-8 space-y-6 md:space-y-8">
                   <h2 className="text-base sm:text-lg font-bold text-white mb-4 md:mb-6 flex items-center gap-2 sm:gap-4" data-aos="fade-right">
                     <span className="w-6 sm:w-8 h-px bg-[#CCCCFF]"></span>
-                    {t('pages.education.timelineTitle')}
+                    {t('pages.journey.timelineTitle')}
                   </h2>
 
                   <div 
@@ -179,42 +179,42 @@ export default function EducationWorkPage() {
                           <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
                             <span className="text-[10px] uppercase tracking-[0.2em] text-[#CCCCFF] font-bold flex items-center gap-2">
                               <Calendar size={12} />
-                              {t(`pages.education.items.${item.key}.date`)}
+                              {t(`pages.journey.items.${item.key}.date`)}
                             </span>
                           </div>
 
                           <h3 className="text-lg font-bold text-white mb-1 group-hover:text-[#CCCCFF] transition-colors">
-                            {t(`pages.education.items.${item.key}.title`)}
+                            {t(`pages.journey.items.${item.key}.title`)}
                           </h3>
                           
                           <div className="flex items-center gap-2 text-xs text-gray-400 mb-4 italic">
                             <Building2 size={12} />
-                            {t(`pages.education.items.${item.key}.subtitle`)}
+                            {t(`pages.journey.items.${item.key}.subtitle`)}
                           </div>
 
                           <p className="text-xs md:text-sm text-gray-300 leading-relaxed text-justify opacity-80 group-hover:opacity-100 transition-opacity">
-                            {t(`pages.education.items.${item.key}.description`)}
+                            {t(`pages.journey.items.${item.key}.description`)}
                           </p>
 
                           <div className="mt-4 flex flex-wrap gap-2">
                             {item.key === 'work' && (
                               <span className="px-2 py-1 bg-[#CCCCFF]/10 border border-[#CCCCFF]/30 text-[10px] text-[#CCCCFF] rounded-none uppercase font-bold tracking-wider">
-                                {t('pages.education.items.work.role')}
+                                {t('pages.journey.items.work.role')}
                               </span>
                             )}
                             {item.key === 'university' && (
                               <>
                                 <span className="px-2 py-1 bg-[#CCCCFF]/10 border border-[#CCCCFF]/30 text-[10px] text-[#CCCCFF] rounded-none uppercase font-bold tracking-wider">
-                                  {t('pages.education.items.university.achievement1')}
+                                  {t('pages.journey.items.university.achievement1')}
                                 </span>
                                 <span className="px-2 py-1 bg-[#CCCCFF]/10 border border-[#CCCCFF]/30 text-[10px] text-[#CCCCFF] rounded-none uppercase font-bold tracking-wider">
-                                  {t('pages.education.items.university.achievement2')}
+                                  {t('pages.journey.items.university.achievement2')}
                                 </span>
                               </>
                             )}
                             {item.key === 'highschool' && (
                               <span className="px-2 py-1 bg-[#CCCCFF]/10 border border-[#CCCCFF]/30 text-[10px] text-[#CCCCFF] rounded-none uppercase font-bold tracking-wider">
-                                {t('pages.education.items.highschool.achievement')}
+                                {t('pages.journey.items.highschool.achievement')}
                               </span>
                             )}
                           </div>
@@ -239,7 +239,7 @@ export default function EducationWorkPage() {
                       <div className="w-1.5 h-1.5 bg-[#CCCCFF] rotate-45"></div>
                       <h3 className="text-[10px] sm:text-xs font-bold text-white tracking-[0.2em] uppercase flex items-center gap-2">
                         <Trophy size={14} className="text-[#CCCCFF]" />
-                        {t('pages.education.achievementsTitle')}
+                        {t('pages.journey.achievementsTitle')}
                       </h3>
                     </div>
 
@@ -258,14 +258,14 @@ export default function EducationWorkPage() {
                           </div>
                           <div>
                             <h4 className="text-[11px] md:text-xs font-bold text-white mb-1 group-hover:text-[#CCCCFF] transition-colors leading-tight">
-                              {t(`pages.education.certifications.${cert.key}.title`)}
+                              {t(`pages.journey.certifications.${cert.key}.title`)}
                             </h4>
                             <div className="flex flex-col gap-0.5">
                               <span className="text-[9px] text-gray-400 uppercase tracking-wider">
-                                {t(`pages.education.certifications.${cert.key}.issuer`)}
+                                {t(`pages.journey.certifications.${cert.key}.issuer`)}
                               </span>
                               <span className="text-[9px] text-[#CCCCFF]/60 font-medium">
-                                {t(`pages.education.certifications.${cert.key}.date`)}
+                                {t(`pages.journey.certifications.${cert.key}.date`)}
                               </span>
                             </div>
                           </div>
@@ -292,7 +292,7 @@ export default function EducationWorkPage() {
                       <div className="w-1.5 h-1.5 bg-[#CCCCFF] rotate-45"></div>
                       <h3 className="text-[10px] sm:text-xs font-bold text-white tracking-[0.2em] uppercase flex items-center gap-2">
                         <Sparkles size={14} className="text-[#CCCCFF]" />
-                        {t('pages.education.futureLearning.title')}
+                        {t('pages.journey.futureLearning.title')}
                       </h3>
                     </div>
 
@@ -311,10 +311,10 @@ export default function EducationWorkPage() {
                           </div>
                           <div>
                             <h4 className="text-[11px] md:text-xs font-bold text-white mb-1 group-hover:text-[#CCCCFF] transition-colors leading-tight">
-                              {t(`pages.education.futureLearning.items.${item.key}.title`)}
+                              {t(`pages.journey.futureLearning.items.${item.key}.title`)}
                             </h4>
                             <span className="text-[9px] text-gray-400 uppercase tracking-wider">
-                              {t(`pages.education.futureLearning.items.${item.key}.subtitle`)}
+                              {t(`pages.journey.futureLearning.items.${item.key}.subtitle`)}
                             </span>
                           </div>
                         </div>

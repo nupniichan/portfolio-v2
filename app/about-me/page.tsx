@@ -172,11 +172,11 @@ export default function AboutMePage() {
                     </h3>
                     
                     <div className="space-y-6">
-                      {[1, 2, 3, 4].map((num) => (
-                        <div key={num} className="relative pl-6 group">
+                      {(t('pages.about.intro') as string[]).map((introText, index) => (
+                        <div key={index} className="relative pl-6 group">
                           <div className="absolute left-0 top-0 bottom-0 w-px bg-white/10 group-hover:bg-[#CCCCFF]/40 transition-colors"></div>
                           <p className="text-gray-200 text-xs md:text-sm lg:text-[15px] leading-relaxed text-justify opacity-90 group-hover:opacity-100 transition-opacity">
-                            {t(`pages.about.intro${num}` as any)}
+                            {introText}
                           </p>
                         </div>
                       ))}

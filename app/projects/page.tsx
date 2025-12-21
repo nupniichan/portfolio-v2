@@ -3,14 +3,15 @@
 import { useState } from "react";
 import { useTranslations } from "../hooks/useTranslations";
 import MetadataUpdater from "../components/MetadataUpdater";
-import { 
-  MessageSquare, 
-  ShoppingCart, 
-  Tv, 
-  CloudSun, 
-  Gamepad2, 
-  IdCard, 
-  Github, 
+import React from "react";
+import {
+  MessageSquare,
+  ShoppingCart,
+  Tv,
+  CloudSun,
+  Gamepad2,
+  IdCard,
+  Github,
   Box,
   X,
   ExternalLink,
@@ -30,7 +31,17 @@ export default function ProjectsPage() {
     }, 300);
   };
 
-  const projects = [
+  const getProjectData = (key: ProjectKey) => {
+    return {
+      title: t(`pages.projects.items.${key}.title`),
+      description: t(`pages.projects.items.${key}.description`),
+      tags: t(`pages.projects.items.${key}.tags`) as string[]
+    };
+  };
+
+  type ProjectKey = "chinokafuu" | "website-ban-linh-kien" | "cs-anilist" | "cs-owm" | "csteam-works" | "profile-page";
+
+  const projects: { key: ProjectKey; icon: React.JSX.Element; github: string; nuget?: string }[] = [
     {
       key: "chinokafuu",
       icon: <MessageSquare size={18} className="text-[#CCCCFF]" />,
@@ -139,15 +150,15 @@ export default function ProjectsPage() {
                     </div>
 
                     <h3 className="text-sm md:text-base font-bold text-white mb-1.5 group-hover:text-[#CCCCFF] transition-colors">
-                      {t(`pages.projects.items.${project.key}.title` as any)}
+                      {getProjectData(project.key as ProjectKey).title}
                     </h3>
-                    
+
                     <p className="text-[11px] md:text-xs text-gray-400 mb-3 line-clamp-2 leading-relaxed h-8 md:h-9">
-                      {t(`pages.projects.items.${project.key}.description` as any)}
+                      {getProjectData(project.key as ProjectKey).description}
                     </p>
 
                     <div className="flex flex-wrap gap-1.5">
-                      {(t(`pages.projects.items.${project.key}.tags` as any) as unknown as string[]).map((tag: string, tagIdx: number) => (
+                      {getProjectData(project.key as ProjectKey).tags.map((tag: string, tagIdx: number) => (
                         <span 
                           key={tagIdx}
                           className="text-[9px] uppercase tracking-wider px-2 py-0.5 bg-white/5 border border-white/10 text-gray-300"
@@ -209,10 +220,10 @@ export default function ProjectsPage() {
                 </div>
                 <div>
                   <h2 className="text-xl md:text-2xl font-bold text-white">
-                    {t(`pages.projects.items.${activeProject.key}.title` as any)}
+                    {getProjectData(activeProject.key as ProjectKey).title}
                   </h2>
                   <div className="flex flex-wrap gap-2 mt-2">
-                    {(t(`pages.projects.items.${activeProject.key}.tags` as any) as unknown as string[]).map((tag: string, idx: number) => (
+                    {getProjectData(activeProject.key as ProjectKey).tags.map((tag: string, idx: number) => (
                       <span key={idx} className="text-[10px] uppercase tracking-widest px-2 py-0.5 bg-[#CCCCFF]/5 border border-[#CCCCFF]/20 text-[#CCCCFF]">
                         {tag}
                       </span>
@@ -228,7 +239,7 @@ export default function ProjectsPage() {
                     {t('pages.projects.details.description')}
                   </h3>
                   <p className="text-gray-300 text-sm md:text-base leading-relaxed text-justify italic">
-                    {t(`pages.projects.items.${activeProject.key}.description` as any)}
+                    {getProjectData(activeProject.key as ProjectKey).description}
                   </p>
                 </div>
 

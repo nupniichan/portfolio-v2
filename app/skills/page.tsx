@@ -29,9 +29,9 @@ export default function SkillsPage() {
       title: t('pages.skills.categories.frontend'),
       Icon: Layout,
       skills: [
-        { name: "HTML5 & CSS3", level: 70 },
+        { name: "HTML5 & CSS3", level: 80 },
         { name: "JavaScript", level: 50 },
-        { name: "React.js", level: 70 },
+        { name: "React.js / Next.js", level: 50 },
         { name: "Tailwind CSS", level: 85 },
       ]
     },
@@ -50,19 +50,19 @@ export default function SkillsPage() {
       title: t('pages.skills.categories.database'),
       Icon: Database,
       skills: [
-        { name: "MySQL", level: 80 },
+        { name: "MySQL", level: 70 },
         { name: "SQL Server", level: 80 },
-        { name: "PostgreSQL", level: 70 },
+        { name: "PostgreSQL", level: 40 },
         { name: "MongoDB", level: 50 },
       ]
     }
   ];
 
   const tools = [
-    { name: "Docker", description: t('pages.skills.tools.docker'), icon: <Cloud size={24} className="text-[#CCCCFF]" /> },
-    { name: "Ubuntu/Linux", description: t('pages.skills.tools.linux'), icon: <Terminal size={24} className="text-[#CCCCFF]" /> },
-    { name: "Git & GitHub", description: t('pages.skills.tools.git'), icon: <GitBranch size={24} className="text-[#CCCCFF]" /> },
-    { name: "Others", description: t('pages.skills.tools.others'), icon: <Wrench size={24} className="text-[#CCCCFF]" /> },
+    { name: "Docker", description: t('pages.skills.toolDetails.docker'), icon: <Cloud size={24} className="text-[#CCCCFF]" /> },
+    { name: "Ubuntu/Linux", description: t('pages.skills.toolDetails.linux'), icon: <Terminal size={24} className="text-[#CCCCFF]" /> },
+    { name: "Git", description: t('pages.skills.toolDetails.git'), icon: <GitBranch size={24} className="text-[#CCCCFF]" /> },
+    { name: "Others", description: t('pages.skills.toolDetails.others'), icon: <Wrench size={24} className="text-[#CCCCFF]" /> },
   ];
 
   const languages = [
@@ -184,7 +184,7 @@ export default function SkillsPage() {
                     
                     <div className="flex items-center gap-3 mb-6">
                       <Wrench className="text-[#CCCCFF]" size={20} />
-                      <h3 className="text-lg font-bold text-white uppercase tracking-wider">{t('pages.skills.tools.title')}</h3>
+                      <h3 className="text-lg font-bold text-white uppercase tracking-wider">{t('pages.skills.toolDetails.title')}</h3>
                     </div>
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

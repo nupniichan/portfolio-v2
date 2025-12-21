@@ -5,7 +5,7 @@ import { useThemeLanguage } from "./ThemeLanguageProvider";
 import { useTranslations } from "../hooks/useTranslations";
 
 interface MetadataUpdaterProps {
-  pageKey: "home" | "about" | "skills" | "projects" | "education" | "contact";
+  pageKey: "home" | "about" | "skills" | "projects" | "journey" | "contact";
 }
 
 export default function MetadataUpdater({ pageKey }: MetadataUpdaterProps) {

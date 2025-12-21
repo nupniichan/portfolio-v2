@@ -238,7 +238,7 @@ export default function ContactPage() {
             </button>
             
             <h3 className="text-lg font-bold text-white mb-4 text-center">
-              {qrModal.platform === 'telegram' ? 'Telegram QR Code' : 'Zalo QR Code'}
+              {qrModal.platform === 'telegram' ? t('pages.contact.telegram.telegramQrTitle') : t('pages.contact.telegram.zaloQrTitle')}
             </h3>
             
             <div className="flex justify-center">
