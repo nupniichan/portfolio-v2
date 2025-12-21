@@ -18,7 +18,6 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # CI Job - Continuous Integration (runs on PRs and pushes)
   ci:
     name: Continuous Integration
     runs-on: ubuntu-latest
@@ -82,16 +81,15 @@ jobs:
           NODE_ENV: production
         continue-on-error: false
 
-  # CD Job - Continuous Deployment (only runs on main branch after CI passes)
   build:
     name: Build for Production
     runs-on: ubuntu-latest
     needs: ci
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
-
+        
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -109,18 +107,18 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
-
+      
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-
+      
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           static_site_generator: next
-
+      
       - name: Cache Next.js build
         uses: actions/cache@v4
         with:
