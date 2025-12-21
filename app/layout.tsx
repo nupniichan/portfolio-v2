@@ -3,6 +3,7 @@ import "./globals.css";
 import { Noto_Sans } from "next/font/google";
 import { ThemeLanguageProvider } from "./components/ThemeLanguageProvider";
 import LayoutContent from "./components/LayoutContent";
+import { withBasePath } from "./utils/paths";
 
 const notoSans = Noto_Sans({
   subsets: ["latin", "vietnamese"],

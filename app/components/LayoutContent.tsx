@@ -6,6 +6,7 @@ import Header from "./Header";
 import ClientAudioPlayer from "./ClientAudioPlayer";
 import LoadingOverlay from "./LoadingOverlay";
 import AOSInit from "./AOSInit";
+import { withBasePath } from "../utils/paths";
 
 interface LayoutContentProps {
   children: React.ReactNode;
@@ -22,7 +23,7 @@ export default function LayoutContent({ children }: LayoutContentProps) {
       {mounted && theme === "light" && (
         <video
           className="background-video absolute inset-0 h-full w-full object-cover z-0"
-          src="/Images/Background/background.webm"
+          src={withBasePath("/Images/Background/background.webm")}
           autoPlay
           loop
           muted

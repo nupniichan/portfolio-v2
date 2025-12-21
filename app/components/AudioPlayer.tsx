@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react';
 import { Play, Pause, SkipBack, SkipForward, Repeat, Volume2, Music } from 'lucide-react';
+import { withBasePath } from '../utils/paths';
 
 interface AudioPlayerProps {
   className?: string;
@@ -30,7 +31,7 @@ const AudioPlayer = ({ className = '' }: AudioPlayerProps) => {
   const tracks = [
     {
       title: "CLANNAD - The palm of a tiny hand",
-      src: "/Musics/CLANNAD  The palm of a tiny hand.mp3"
+      src: withBasePath("/Musics/CLANNAD  The palm of a tiny hand.mp3")
     },
   ];
 

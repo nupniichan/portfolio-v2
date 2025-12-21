@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useTranslations } from "../hooks/useTranslations";
 import MetadataUpdater from "../components/MetadataUpdater";
 import { Mail, MessageCircle, Home, ArrowRight, X } from "lucide-react";
+import { withBasePath } from "../utils/paths";
 
 export default function ContactPage() {
   const { t } = useTranslations();
@@ -14,8 +16,8 @@ export default function ContactPage() {
   });
 
   const qrCodes = {
-    telegram: "/Images/QR/telegram-qr.jpg",
-    zalo: "/Images/QR/zalo-qr.jpg"
+    telegram: withBasePath("/Images/QR/telegram-qr.jpg"),
+    zalo: withBasePath("/Images/QR/zalo-qr.jpg")
   };
 
   const openQrModal = (platform: string) => {
@@ -197,13 +199,13 @@ export default function ContactPage() {
                     <p className="text-xs md:text-sm text-gray-300 mb-4">
                       {t('pages.contact.home.description')}
                     </p>
-                    <a 
+                    <Link 
                       href="/"
                       className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 hover:border-[#CCCCFF]/30 hover:bg-white/10 transition-all text-xs md:text-sm text-gray-200 group-hover:text-white"
                     >
                       {t('pages.contact.home.action')}
                       <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
