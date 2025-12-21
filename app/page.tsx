@@ -7,29 +7,46 @@ import SocialLinks from "./components/SocialLinks";
 import { useTranslations } from "./hooks/useTranslations";
 import MetadataUpdater from "./components/MetadataUpdater";
 import { withBasePath } from "./utils/paths";
+import { useEffect } from "react";
+import CardParticles from "./components/CardParticles";
 
 export default function Home() {
   const { t } = useTranslations();
+  const avatarPath = withBasePath("/Images/Avatar/ChinoKafuu.png");
+
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "image";
+    link.href = avatarPath;
+    link.fetchPriority = "high";
+    document.head.appendChild(link);
+
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, [avatarPath]);
 
   return (
     <>
       <MetadataUpdater pageKey="home" />
-      <div className="flex min-h-screen items-center justify-center p-2 sm:p-3 md:p-4 lg:p-6">
+      <div className="flex h-screen items-center justify-center p-2 sm:p-3 md:p-4 lg:p-6">
       <div 
-        className="w-full max-w-[95%] sm:max-w-[80%] md:max-w-[75%] lg:max-w-[70%] xl:max-w-[60%] floating-container max-sm:animate-none relative group"
+        className="w-full max-w-[95%] sm:max-w-[80%] md:max-w-[75%] lg:max-w-[70%] xl:max-w-[60%] floating-container max-sm:animate-none relative group overflow-hidden md:mt-4"
         data-aos="fade-up"
       >
-        <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#CCCCFF]/30 -translate-x-2 -translate-y-2"></div>
-        <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#CCCCFF]/30 translate-x-2 translate-y-2"></div>
-        <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-[#CCCCFF]/40 -translate-x-1 translate-y-1"></div>
-        <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-[#CCCCFF]/40 translate-x-1 -translate-y-1"></div>
+        <CardParticles />
+        <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#CCCCFF]/30 -translate-x-2 -translate-y-2 z-10"></div>
+        <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#CCCCFF]/30 translate-x-2 translate-y-2 z-10"></div>
+        <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-[#CCCCFF]/40 -translate-x-1 translate-y-1 z-10"></div>
+        <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-[#CCCCFF]/40 translate-x-1 -translate-y-1 z-10"></div>
 
         <div className="absolute -left-8 top-1/2 -translate-y-1/2 hidden xl:flex flex-col items-center gap-4 opacity-20 select-none pointer-events-none">
           <span className="[writing-mode:vertical-rl] text-[10px] tracking-[0.5em] text-white uppercase font-black">PORTFOLIO</span>
           <div className="w-px h-12 bg-linear-to-b from-[#CCCCFF] to-transparent"></div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center p-2.5 md:p-4 lg:p-6 relative">
+        <div className="flex flex-col md:flex-row items-center p-2.5 md:p-4 lg:p-6 relative z-10">
           <div className="absolute top-4 right-4 hidden md:flex gap-1.5 select-none opacity-20 group-hover:opacity-40 transition-opacity">
             {[...Array(3)].map((_, i) => (
               <div 
@@ -84,12 +101,14 @@ export default function Home() {
               <div className="absolute inset-0 rounded-full bg-[#CCCCFF]/10 blur-xl animate-pulse"></div>
               
               <Image
-                className="rounded-full w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 object-cover transition-all duration-300 relative z-10 border-2 border-white/10"
-                src={withBasePath("/Images/Avatar/ChinoKafuu.png")}
+                className="rounded-full w-24 h-24 sm:w-40 sm:h-40 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 object-cover transition-all duration-300 relative z-10 border-2 border-white/10"
+                src={avatarPath}
                 alt="Avatar"
                 width={224}
                 height={224}
                 priority
+                fetchPriority="high"
+                loading="eager"
               />
             </div>
             

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "../hooks/useTranslations";
 import MetadataUpdater from "../components/MetadataUpdater";
 import React from "react";
+import CardParticles from "../components/CardParticles";
 import {
   MessageSquare,
   ShoppingCart,
@@ -94,19 +95,16 @@ export default function ProjectsPage() {
         </div>
 
         <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] xl:max-w-[1100px] relative py-8 z-10">
-          <div className="floating-container animate-fade-in-up relative">
-            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#CCCCFF]/30 -translate-x-2 -translate-y-2"></div>
-            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#CCCCFF]/30 translate-x-2 translate-y-2"></div>
-            
-            <div className="absolute top-4 right-4 w-3 h-3 border border-[#CCCCFF]/20 rotate-45"></div>
-            <div className="absolute bottom-4 left-4 w-3 h-3 border border-[#CCCCFF]/20 rotate-45"></div>
-            <div className="absolute top-0 right-0 w-2 h-2 bg-[#CCCCFF]/30"></div>
-            <div className="absolute bottom-0 left-0 w-2 h-2 bg-[#CCCCFF]/30"></div>
-            
-            <div className="absolute top-1/2 left-0 w-1 h-24 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent -translate-x-4"></div>
-            <div className="absolute top-1/2 right-0 w-1 h-24 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent translate-x-4"></div>
+          <div className="floating-container animate-fade-in-up relative overflow-hidden">
+            <CardParticles />
+            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#CCCCFF]/30 -translate-x-2 -translate-y-2 z-10"></div>
+            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#CCCCFF]/30 translate-x-2 translate-y-2 z-10"></div>
+            <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-[#CCCCFF]/40 -translate-x-1 translate-y-1 z-10"></div>
+            <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-[#CCCCFF]/40 translate-x-1 -translate-y-1 z-10"></div>
+            <div className="absolute top-1/2 left-0 w-1 h-24 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent -translate-x-4 z-10"></div>
+            <div className="absolute top-1/2 right-0 w-1 h-24 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent translate-x-4 z-10"></div>
 
-            <div className="about-section p-2 md:p-4 lg:p-5">
+            <div className="about-section p-2 md:p-4 lg:p-5 relative z-10">
               <div 
                 className="about-header mb-4 relative border-b border-white/10 pb-3"
                 data-aos="fade-down"

@@ -6,6 +6,7 @@ import { useTranslations } from "../hooks/useTranslations";
 import MetadataUpdater from "../components/MetadataUpdater";
 import { Mail, MessageCircle, Home, ArrowRight, X } from "lucide-react";
 import { withBasePath } from "../utils/paths";
+import CardParticles from "../components/CardParticles";
 
 export default function ContactPage() {
   const { t } = useTranslations();
@@ -46,18 +47,17 @@ export default function ContactPage() {
           <div className="absolute bottom-1/4 left-1/3 w-34 h-34 bg-linear-to-tl from-[#CCCCFF]/6 to-transparent rounded-full blur-lg" style={{ animation: 'floating 9s ease-in-out infinite', animationDelay: '2s' }}></div>
         </div>
 
-        <div className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] xl:max-w-[70%] 2xl:max-w-[1100px] relative z-10">
-          <div className="floating-container animate-fade-in-up relative">
-            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#CCCCFF]/30 -translate-x-2 -translate-y-2"></div>
-            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#CCCCFF]/30 translate-x-2 translate-y-2"></div>
-            <div className="absolute top-4 right-4 w-3 h-3 border border-[#CCCCFF]/20 rotate-45"></div>
-            <div className="absolute bottom-4 left-4 w-3 h-3 border border-[#CCCCFF]/20 rotate-45"></div>
-            <div className="absolute top-0 right-0 w-2 h-2 bg-[#CCCCFF]/30"></div>
-            <div className="absolute bottom-0 left-0 w-2 h-2 bg-[#CCCCFF]/30"></div>
-            <div className="absolute top-1/2 left-0 w-1 h-32 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent -translate-x-4"></div>
-            <div className="absolute top-1/2 right-0 w-1 h-32 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent translate-x-4"></div>
+        <div className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] xl:max-w-[70%] 2xl:max-w-[1100px] relative py-8 z-10">
+          <div className="floating-container animate-fade-in-up relative overflow-hidden">
+            <CardParticles />
+            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#CCCCFF]/30 -translate-x-2 -translate-y-2 z-10"></div>
+            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#CCCCFF]/30 translate-x-2 translate-y-2 z-10"></div>
+            <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-[#CCCCFF]/40 -translate-x-1 translate-y-1 z-10"></div>
+            <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-[#CCCCFF]/40 translate-x-1 -translate-y-1 z-10"></div>
+            <div className="absolute top-1/2 left-0 w-1 h-32 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent -translate-x-4 z-10"></div>
+            <div className="absolute top-1/2 right-0 w-1 h-32 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent translate-x-4 z-10"></div>
 
-            <div className="p-2 md:p-4 lg:p-6">
+            <div className="p-2 md:p-4 lg:p-6 relative z-10">
               <div 
                 className="mb-6 relative border-b border-white/10 pb-4"
                 data-aos="fade-down"

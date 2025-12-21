@@ -3,6 +3,7 @@
 import { useTranslations } from "../hooks/useTranslations";
 import MetadataUpdater from "../components/MetadataUpdater";
 import { useEffect, useRef, useState } from "react";
+import CardParticles from "../components/CardParticles";
 import { 
   GraduationCap, 
   Briefcase, 
@@ -14,7 +15,8 @@ import {
   Building2,
   Cpu,
   Star,
-  Sparkles
+  Sparkles,
+  Code
 } from "lucide-react";
 
 export default function EducationWorkPage() {
@@ -68,7 +70,8 @@ export default function EducationWorkPage() {
     { key: "devops", icon: <Cpu size={16} /> },
     { key: "csharp", icon: <Award size={16} /> },
     { key: "problem_solving", icon: <Star size={16} /> },
-    { key: "kubernetes", icon: <Sparkles size={16} /> }
+    { key: "kubernetes", icon: <Sparkles size={16} /> },
+    { key: "leetcode", icon: <Code size={16} /> }
   ];
 
   const futureLearning = [
@@ -101,29 +104,26 @@ export default function EducationWorkPage() {
           <div className="absolute bottom-1/3 right-1/3 w-30 h-30 bg-linear-to-tl from-[#CCCCFF]/6 to-transparent rounded-full blur-lg" style={{ animation: 'floating 8s ease-in-out infinite', animationDelay: '1.5s' }}></div>
         </div>
 
-        <div className="w-full max-w-[95%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] xl:max-w-[70%] 2xl:max-w-[1100px] relative z-10">
-          <div className="floating-container animate-fade-in-up relative">
-            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#CCCCFF]/30 -translate-x-2 -translate-y-2"></div>
-            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#CCCCFF]/30 translate-x-2 translate-y-2"></div>
+        <div className="w-full max-w-[95%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] xl:max-w-[70%] 2xl:max-w-[1100px] relative py-8 z-10">
+          <div className="floating-container animate-fade-in-up relative overflow-hidden">
+            <CardParticles />
+            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#CCCCFF]/30 -translate-x-2 -translate-y-2 z-10"></div>
+            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#CCCCFF]/30 translate-x-2 translate-y-2 z-10"></div>
+            <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-[#CCCCFF]/40 -translate-x-1 translate-y-1 z-10"></div>
+            <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-[#CCCCFF]/40 translate-x-1 -translate-y-1 z-10"></div>    
+            <div className="absolute top-1/2 left-0 w-1 h-28 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent -translate-x-4 z-10"></div>
+            <div className="absolute top-1/2 right-0 w-1 h-28 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent translate-x-4 z-10"></div>
             
-            <div className="absolute top-4 right-4 w-3 h-3 border border-[#CCCCFF]/20 rotate-45"></div>
-            <div className="absolute bottom-4 left-4 w-3 h-3 border border-[#CCCCFF]/20 rotate-45"></div>
-            <div className="absolute top-0 right-0 w-2 h-2 bg-[#CCCCFF]/30"></div>
-            <div className="absolute bottom-0 left-0 w-2 h-2 bg-[#CCCCFF]/30"></div>
-            
-            <div className="absolute top-1/2 left-0 w-1 h-28 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent -translate-x-4"></div>
-            <div className="absolute top-1/2 right-0 w-1 h-28 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent translate-x-4"></div>
-            
-            <div className="p-3 sm:p-5 md:p-6 lg:p-8">
+            <div className="p-3 sm:p-5 md:p-6 lg:p-8 relative z-10">
               <div 
                 className="mb-8 relative border-b border-white/10 pb-6"
                 data-aos="fade-down"
               >
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <h1 className="text-[13px] sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-white text-stroke flex items-center gap-1 sm:gap-3 whitespace-nowrap">
+                  <h1 className="text-lg sm:text-xl md:text-2xl font-extrabold text-white text-stroke flex items-center gap-1 sm:gap-3 whitespace-nowrap">
                     <GraduationCap className="text-[#CCCCFF] animate-pulse w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8" />
                     {t('pages.journey.header')} 
-                    <span className="animate-kaomoji ml-1 sm:ml-2 inline-block text-[11px] sm:text-lg md:text-xl">{t('pages.journey.headerEmoji')}</span>
+                    <span className="animate-kaomoji ml-1 sm:ml-2 inline-block">{t('pages.journey.headerEmoji')}</span>
                   </h1>
                 </div>
               </div>

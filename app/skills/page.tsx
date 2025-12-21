@@ -2,6 +2,7 @@
 
 import { useTranslations } from "../hooks/useTranslations";
 import MetadataUpdater from "../components/MetadataUpdater";
+import CardParticles from "../components/CardParticles";
 import { 
   Server, 
   Database, 
@@ -14,6 +15,7 @@ import {
   BookOpen
 } from "lucide-react";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function SkillsPage() {
   const { t } = useTranslations();
@@ -71,23 +73,23 @@ export default function SkillsPage() {
       level: 100, 
       description: t('pages.skills.languages.vietnamese.description'), 
       badges: [t('pages.skills.languages.vietnamese.badge1'), t('pages.skills.languages.vietnamese.badge2')],
-      flag: "🇻🇳" 
+      flag: "/Images/CountryFlag/Flag_of_VietNam.png" 
     },
     { 
       name: t('pages.skills.languages.english.name'), 
       level: 75, 
       description: t('pages.skills.languages.english.description'), 
       badges: [t('pages.skills.languages.english.badge1'), t('pages.skills.languages.english.badge2')],
-      flag: "🇬🇧" 
+      flag: "/Images/CountryFlag/Flag_of_the_United_States_and_United_Kingdom.png" 
     },
   ];
 
-  const futurePlans = t('pages.skills.futureLearning.items') as { title: string, description: string }[];
+  const futurePlans = (t('pages.skills.futureLearning.items') || []) as { title: string, description: string }[];
 
   return (
     <>
       <MetadataUpdater pageKey="skills" />
-      <div className="flex min-h-screen items-center justify-center p-2 sm:p-3 md:p-4 lg:p-6 pb-20 relative overflow-hidden">
+      <div className="flex min-h-screen items-center justify-center p-2 sm:p-3 md:p-4 lg:p-6 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute top-20 left-10 w-32 h-32 bg-[#CCCCFF]/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: '0s', animationDuration: '4s' }}></div>
           <div className="absolute top-40 right-20 w-24 h-24 bg-[#CCCCFF]/8 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1s', animationDuration: '5s' }}></div>
@@ -98,16 +100,17 @@ export default function SkillsPage() {
           <div className="absolute bottom-1/3 right-1/3 w-28 h-28 bg-linear-to-tl from-[#CCCCFF]/8 to-transparent rounded-full blur-lg" style={{ animation: 'floating 8s ease-in-out infinite', animationDelay: '1.5s' }}></div>
         </div>
 
-        <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] xl:max-w-[1200px] relative z-10">
-          <div className="floating-container animate-fade-in-up relative">
-            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#CCCCFF]/30 -translate-x-2 -translate-y-2"></div>
-            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#CCCCFF]/30 translate-x-2 translate-y-2"></div>
-            <div className="absolute top-4 right-4 w-3 h-3 border border-[#CCCCFF]/20 rotate-45"></div>
-            <div className="absolute bottom-4 left-4 w-3 h-3 border border-[#CCCCFF]/20 rotate-45"></div>
-            <div className="absolute top-1/2 left-0 w-1 h-20 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent -translate-x-4"></div>
-            <div className="absolute top-1/2 right-0 w-1 h-20 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent translate-x-4"></div>
+        <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] xl:max-w-[1200px] relative py-8 z-10">
+          <div className="floating-container animate-fade-in-up relative overflow-hidden">
+            <CardParticles />
+            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#CCCCFF]/30 -translate-x-2 -translate-y-2 z-10"></div>
+            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#CCCCFF]/30 translate-x-2 translate-y-2 z-10"></div>
+            <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-[#CCCCFF]/40 -translate-x-1 translate-y-1 z-10"></div>
+            <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-[#CCCCFF]/40 translate-x-1 -translate-y-1 z-10"></div>
+            <div className="absolute top-1/2 left-0 w-1 h-20 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent -translate-x-4 z-10"></div>
+            <div className="absolute top-1/2 right-0 w-1 h-20 bg-linear-to-b from-transparent via-[#CCCCFF]/20 to-transparent translate-x-4 z-10"></div>
 
-            <div className="skills-section p-2 md:p-6 lg:p-8">
+            <div className="skills-section p-2 md:p-6 lg:p-8 relative z-10">
               <div 
                 className="skills-header mb-8 relative border-b border-white/10 pb-4"
                 data-aos="fade-down"
@@ -229,8 +232,14 @@ export default function SkillsPage() {
                       {languages.map((lang, idx) => (
                         <div key={idx} className="relative group">
                           <div className="flex items-center gap-4 mb-3">
-                            <div className="text-2xl filter grayscale group-hover:grayscale-0 transition-all duration-300 transform group-hover:scale-110">
-                              {lang.flag}
+                            <div className="relative w-8 h-6 filter transition-all duration-300 transform group-hover:scale-110">
+                              <Image 
+                                src={lang.flag} 
+                                alt={`${lang.name} flag`}
+                                fill
+                                className="object-cover rounded-sm"
+                                sizes="32px"
+                              />
                             </div>
                             <div>
                               <h4 className="font-bold text-white">{lang.name}</h4>
