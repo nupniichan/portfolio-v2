@@ -204,12 +204,12 @@
           "date": "2024"
         },
         "csharp": {
-          "title": "Chứng chỉ C# cơ bản",
+          "title": "C# Basic Certificate",
           "issuer": "HackerRank",
           "date": "2023"
         },
         "problem_solving": {
-          "title": "4★ Giải quyết vấn đề",
+          "title": "4★ Problem Solving",
           "issuer": "HackerRank",
           "date": "2023"
         },
@@ -220,7 +220,7 @@
         },
         "leetcode": {
           "title": "DSA Leetcode",
-          "issuer": "Leetcode",
+          "issuer": "Cấu trúc dữ liệu & Giải thuật",
           "date": "Đang giải..."
         }
       },
@@ -229,7 +229,7 @@
         "items": {
           "ai": {
             "title": "AI & Machine Learning",
-            "subtitle": "Khám phá cách AI hoạt động và cách sử dụng nó trong các dự án của mình"
+            "subtitle": "Khám phá cách tạo ra AI"
           },
           "cloud": {
             "title": "Cloud Architecture",

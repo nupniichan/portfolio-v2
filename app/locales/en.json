@@ -219,7 +219,7 @@
         },
         "leetcode": {
           "title": "DSA Leetcode",
-          "issuer": "Leetcode",
+          "issuer": "Data Structures & Algorithms",
           "date": "Solving..."
         }
       },
@@ -228,7 +228,7 @@
         "items": {
           "ai": {
             "title": "AI & Machine Learning",
-            "subtitle": "Exploring how AI works and how to use it in my projects"
+            "subtitle": "Exploring how to create AI"
           },
           "cloud": {
             "title": "Cloud Architecture",
