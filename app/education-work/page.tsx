@@ -29,9 +29,7 @@ export default function EducationWorkPage() {
       const rect = timelineRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       
-      // Điểm bắt đầu kích hoạt animation (ví dụ: khi timeline cách top 80%)
       const startPoint = windowHeight * 0.8;
-      // Điểm kết thúc (khi timeline lên đến top 20%)
       const endPoint = windowHeight * 0.2;
       
       const totalDist = startPoint - endPoint;
@@ -44,7 +42,7 @@ export default function EducationWorkPage() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Chạy lần đầu
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
