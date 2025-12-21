@@ -5,7 +5,7 @@ export default function SocialLinks() {
   return (
     <div className="mt-1 flex flex-wrap justify-center md:justify-start gap-1.5 sm:gap-2">
       <Link
-        href="https://facebook.com"
+        href="https://www.facebook.com/nupniichan/"
         target="_blank"
         rel="noopener noreferrer"
         className="flex h-8 w-8 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
@@ -19,7 +19,7 @@ export default function SocialLinks() {
         />
       </Link>
       <Link
-        href="https://github.com"
+        href="https://github.com/nupniichan"
         target="_blank"
         rel="noopener noreferrer"
         className="flex h-8 w-8 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
@@ -33,7 +33,7 @@ export default function SocialLinks() {
         />
       </Link>
       <Link
-        href="https://youtube.com"
+        href="https://www.youtube.com/@nupniichan"
         target="_blank"
         rel="noopener noreferrer"
         className="flex h-8 w-8 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
@@ -47,7 +47,7 @@ export default function SocialLinks() {
         />
       </Link>
       <Link
-        href="https://discord.com"
+        href="https://discord.gg/W2nye2nfAn"
         target="_blank"
         rel="noopener noreferrer"
         className="flex h-8 w-8 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
@@ -61,7 +61,7 @@ export default function SocialLinks() {
         />
       </Link>
       <Link
-        href="https://anilist.co"
+        href="https://anilist.co/user/nupniichan/"
         target="_blank"
         rel="noopener noreferrer"
         className="flex h-8 w-8 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
@@ -75,7 +75,7 @@ export default function SocialLinks() {
         />
       </Link>
       <Link
-        href="https://linkedin.com"
+        href="https://www.linkedin.com/in/nguyenphiquocbao/"
         target="_blank"
         rel="noopener noreferrer"
         className="flex h-8 w-8 items-center justify-center rounded-full border border-white/40 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-transform transition-shadow transition-colors duration-200"
