@@ -2,6 +2,7 @@
 
 import { useTranslations } from "../hooks/useTranslations";
 import MetadataUpdater from "../components/MetadataUpdater";
+import { useEffect, useRef, useState } from "react";
 import { 
   GraduationCap, 
   Briefcase, 
@@ -18,6 +19,34 @@ import {
 
 export default function EducationWorkPage() {
   const { t } = useTranslations();
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const [lineProgress, setLineProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!timelineRef.current) return;
+      
+      const rect = timelineRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Điểm bắt đầu kích hoạt animation (ví dụ: khi timeline cách top 80%)
+      const startPoint = windowHeight * 0.8;
+      // Điểm kết thúc (khi timeline lên đến top 20%)
+      const endPoint = windowHeight * 0.2;
+      
+      const totalDist = startPoint - endPoint;
+      const currentPos = startPoint - rect.top;
+      
+      let progress = currentPos / rect.height;
+      progress = Math.min(1, Math.max(0, progress));
+      
+      setLineProgress(progress);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Chạy lần đầu
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const timelineItems = [
     {
@@ -52,6 +81,16 @@ export default function EducationWorkPage() {
 
   return (
     <>
+      <style dangerouslySetInnerHTML={{__html: `
+        .timeline-icon {
+          left: -37.5px !important;
+        }
+        @media (min-width: 640px) {
+          .timeline-icon {
+            left: -47.15px !important;
+          }
+        }
+      `}} />
       <MetadataUpdater pageKey="education" />
       <div className="flex min-h-screen items-center justify-center p-2 sm:p-6 md:p-8 lg:p-12 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -98,7 +137,22 @@ export default function EducationWorkPage() {
                     {t('pages.education.timelineTitle')}
                   </h2>
 
-                  <div className="relative border-l border-[#CCCCFF]/20 ml-3 sm:ml-4 pl-6 sm:pl-8 space-y-8 md:space-y-12">
+                  <div 
+                    ref={timelineRef}
+                    className="relative ml-3 sm:ml-4 pl-6 sm:pl-8 space-y-8 md:space-y-12"
+                  >
+                    <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-[#CCCCFF]/10 rounded"></div>
+                    
+                    <div 
+                      className="absolute left-0 top-0 w-[2px] z-0 transition-transform duration-150 ease-out rounded"
+                      style={{
+                        transform: `scaleY(${lineProgress})`,
+                        transformOrigin: '50% 0% 0px',
+                        height: '100%',
+                        background: 'linear-gradient(to bottom, #CCCCFF, #CCCCFF80, transparent)'
+                      }}
+                    ></div>
+
                     {timelineItems.map((item, index) => (
                       <div 
                         key={item.key} 
@@ -106,7 +160,13 @@ export default function EducationWorkPage() {
                         data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
                         data-aos-delay={index * 100}
                       >
-                        <div className="absolute -left-[37px] sm:-left-[45px] top-0 w-7 h-7 sm:w-8 sm:h-8 bg-[#05050a] border border-[#CCCCFF]/40 rounded-full flex items-center justify-center z-10 shadow-[0_0_10px_#CCCCFF33]">
+                        <div 
+                          className="absolute timeline-icon top-0 w-7 h-7 sm:w-8 sm:h-8 bg-[#05050a] border border-[#CCCCFF]/40 rounded-full flex items-center justify-center z-10 shadow-[0_0_10px_#CCCCFF33] transition-all duration-500"
+                          style={{
+                            borderColor: lineProgress > (index / (timelineItems.length - 0.5)) ? '#CCCCFF' : 'rgba(204, 204, 255, 0.4)',
+                            boxShadow: lineProgress > (index / (timelineItems.length - 0.5)) ? '0 0 15px rgba(204, 204, 255, 0.4)' : 'none'
+                          }}
+                        >
                           <div className="scale-75 sm:scale-100 flex items-center justify-center">
                             {item.icon}
                           </div>
