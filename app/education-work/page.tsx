@@ -87,7 +87,7 @@ export default function EducationWorkPage() {
         }
         @media (min-width: 640px) {
           .timeline-icon {
-            left: -47.15px !important;
+            left: -47.16px !important;
           }
         }
       `}} />
