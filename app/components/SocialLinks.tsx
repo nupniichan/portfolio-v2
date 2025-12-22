@@ -16,7 +16,7 @@ export default function SocialLinks() {
           alt="Facebook"
           width={16}
           height={16}
-          className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 rounded-full"
+          className="w-6 h-6 rounded-full"
         />
       </Link>
       <Link
@@ -30,7 +30,7 @@ export default function SocialLinks() {
           alt="GitHub"
           width={16}
           height={16}
-          className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 rounded-full"
+          className="w-6 h-6 rounded-full"
         />
       </Link>
       <Link
@@ -44,7 +44,7 @@ export default function SocialLinks() {
           alt="YouTube"
           width={16}
           height={16}
-          className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 rounded-full"
+          className="w-6 h-6 rounded-full"
         />
       </Link>
       <Link
@@ -58,7 +58,7 @@ export default function SocialLinks() {
           alt="Discord"
           width={16}
           height={16}
-          className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 rounded-full"
+          className="w-6 h-6 rounded-full"
         />
       </Link>
       <Link
@@ -72,7 +72,7 @@ export default function SocialLinks() {
           alt="Anilist"
           width={16}
           height={16}
-          className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 rounded-full"
+          className="w-6 h-6 rounded-full"
         />
       </Link>
       <Link
@@ -86,7 +86,7 @@ export default function SocialLinks() {
           alt="LinkedIn"
           width={16}
           height={16}
-          className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 rounded-full"
+          className="w-6 h-6 rounded-full"
         />
       </Link>
     </div>
