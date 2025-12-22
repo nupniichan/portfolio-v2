@@ -86,7 +86,7 @@ export default function Header() {
         </header>
       </div>
 
-      <div className="pointer-events-none fixed top-0 left-0 right-0 z-50 flex justify-center px-2 pt-4 md:hidden">
+      <div className="pointer-events-none w-full flex justify-center px-2 pt-4 md:hidden">
         <header className="pointer-events-auto flex items-center gap-1.5 rounded-full border border-white/10 bg-black/40 px-2.5 py-1.5 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.3)] transition-all duration-300 animate-header-slide hover:bg-black/50 hover:border-white/20 hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)]">
           <nav className="flex items-center gap-1 relative">
             {NAV_ITEMS.map((item) => {
