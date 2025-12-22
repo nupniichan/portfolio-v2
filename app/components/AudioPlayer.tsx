@@ -30,8 +30,16 @@ const AudioPlayer = ({ className = '' }: AudioPlayerProps) => {
 
   const tracks = [
     {
-      title: "CLANNAD - The palm of a tiny hand",
-      src: withBasePath("/Musics/CLANNAD  The palm of a tiny hand.mp3")
+      title: "To The Endless Sky - Stella Sora",
+      src: withBasePath("/Musics/To The Endless Sky.mp3")
+    },
+    {
+      title: "木もれび青春譜 (Komorebi Seishunfu)",
+      src: withBasePath("/Musics/Sunlight through the trees.mp3")
+    },
+    {
+      title: "yuuyake - Inusuku",
+      src: withBasePath("/Musics/yuuyake.mp3")
     },
   ];
 
