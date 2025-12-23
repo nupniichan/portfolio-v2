@@ -186,7 +186,15 @@ const AudioPlayer = ({ className = '' }: AudioPlayerProps) => {
       {!isExpanded && (
         <div className={`fixed bottom-4 right-4 z-50 ${className}`}>
           <button
-            onClick={() => setIsExpanded(true)}
+            onClick={() => {
+              setIsExpanded(true);
+              setTimeout(() => {
+                const audio = audioRef.current;
+                if (audio && audio.paused) {
+                  audio.play();
+                }
+              }, 100);
+            }}
             className={`w-8 h-8 rounded-full bg-[#CCCCFF] hover:bg-[#BBBBFF] text-black shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 animate-in slide-in-from-bottom-4 flex items-center justify-center group relative ${isPlaying ? 'animate-pulse' : ''}`}
             title="Open Audio Player"
           >
