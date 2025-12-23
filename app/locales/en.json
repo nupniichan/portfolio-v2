@@ -122,7 +122,7 @@
       "metaTitle": "Projects - nupniichan",
       "description": "One of the highlight projects developed and posted on github",
       "header": "My Projects",
-      "headerEmoji": "ヾ(￣▽￣)",
+      "headerEmoji": "(っ ᵔ◡ᵔ)っ",
       "items": {
         "chinokafuu": {
           "title": "Chino Kafuu Discord Bot",
@@ -149,8 +149,8 @@
           "description": "A C# wrapper for the Steam API, allowing you to fetch simple steam data for use in .NET applications.",
           "tags": ["C#", "Steam", "API", "Gaming"]
         },
-        "profile-page": {
-          "title": "Profile Page",
+        "portfolio": {
+          "title": "Portfolio",
           "description": "My personal website upgraded and developed by using Next.js and Tailwind CSS",
           "tags": ["Next.js", "Tailwind CSS", "Portfolio"]
         }
@@ -168,7 +168,7 @@
       "title": "Education & Work",
       "metaTitle": "My Journey - nupniichan",
       "header": "My Journey",
-      "headerEmoji": "୧⁠(⁠ ⁠°⁠ᗜ⁠°⁠ ⁠)⁠୨",
+      "headerEmoji": "(๑•̀ㅂ•́)و✧",
       "timelineTitle": "My Journey",
       "achievementsTitle": "Achievements",
       "description": "Details about my educational background and work experience",
@@ -181,7 +181,7 @@
           "role": "Full-stack Developer"
         },
         "university": {
-          "date": "2022 - Jan 2026 (Expected)",
+          "date": "2022 - March 2026",
           "title": "Software Engineering",
           "subtitle": "HCMC University of Foreign Languages and Information Technology",
           "description": "I am currently majoring in Software Engineering with a focus on Application Development and Software Engineering as well as team management skills. My current GPA is at 3.7 / 4.0",
@@ -246,7 +246,7 @@
       "metaTitle": "Contact - nupniichan",
       "description": "This is the Contact page. You can put your contact information or a contact form here.",
       "header": "Contact",
-      "headerEmoji": "ヽ(・∀・)ﾉ",
+      "headerEmoji": "(b ᵔ▽ᵔ)b",
       "welcomeText": "Thank you for visiting my website. If you want to contact me, please use the information below!",
       "email": {
         "title": "Email",

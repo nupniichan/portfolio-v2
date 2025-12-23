@@ -70,7 +70,7 @@ export default function SkillsPage() {
   const languages = [
     { 
       name: t('pages.skills.languages.vietnamese.name'), 
-      level: 100, 
+      level: 99.9, 
       description: t('pages.skills.languages.vietnamese.description'), 
       badges: [t('pages.skills.languages.vietnamese.badge1'), t('pages.skills.languages.vietnamese.badge2')],
       flag: "/Images/CountryFlag/Flag_of_VietNam.png" 

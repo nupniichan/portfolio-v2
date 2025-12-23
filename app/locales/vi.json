@@ -123,7 +123,7 @@
       "metaTitle": "Dự án - nupniichan",
       "description": "Một số dự án nổi bật được mình làm và đăng tải lên github",
       "header": "Dự án của mình",
-      "headerEmoji": "ヾ(￣▽￣)",
+      "headerEmoji": "(っ ᵔ◡ᵔ)っ",
       "items": {
         "chinokafuu": {
           "title": "Chino Kafuu Discord Bot",
@@ -150,8 +150,8 @@
           "description": "Một wrapper C# cho API Steam, cho phép bạn lấy các data đơn giản từ steam về và sử dụng trong các ứng dụng .NET.",
           "tags": ["C#", "Steam", "API", "Gaming"]
         },
-        "profile-page": {
-          "title": "Profile Page",
+        "portfolio": {
+          "title": "Trang web cá nhân",
           "description": "Trang web cá nhân được của mình được nâng cấp và phát triển bằng Next.js và Tailwind CSS",
           "tags": ["Next.js", "Tailwind CSS", "Portfolio"]
         }
@@ -169,7 +169,7 @@
       "title": "Hành trình",
       "metaTitle": "Hành trình - nupniichan",
       "header": "Hành trình của mình",
-      "headerEmoji": "୧⁠(⁠ ⁠°⁠ᗜ⁠°⁠ ⁠)⁠୨",
+      "headerEmoji": "(๑•̀ㅂ•́)و✧",
       "timelineTitle": "Hành trình của mình",
       "achievementsTitle": "Thành tựu",
       "description": "Thông tin chi tiết về quá trình học tập và làm việc của mình",
@@ -247,7 +247,7 @@
       "metaTitle": "Liên hệ - nupniichan",
       "description": "Cảm ơn bạn đã ghé thăm trang web của mình. Nếu bạn muốn liên hệ, hãy sử dụng các thông tin bên dưới nhé!",
       "header": "Liên Hệ",
-      "headerEmoji": "ヽ(・∀・)ﾉ",
+      "headerEmoji": "(b ᵔ▽ᵔ)b",
       "welcomeText": "Cảm ơn bạn đã ghé thăm trang web của mình. Nếu bạn muốn liên hệ, hãy sử dụng các thông tin bên dưới nhé!",
       "email": {
         "title": "Email",
