@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useThemeLanguage } from "./ThemeLanguageProvider";
 import { NAV_ITEMS, getNavLabels } from "../config/navigation";
 import { useTranslations } from "../hooks/useTranslations";
@@ -18,9 +18,17 @@ const navIcons = {
 
 export default function Header() {
   const pathname = usePathname();
+  const router = useRouter();
   const { theme, language, toggleTheme, toggleLanguage } = useThemeLanguage();
   const { t } = useTranslations();
   const navLabels = getNavLabels(language);
+
+  const handleNav = (href: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
+    if (isActive) return;
+    router.push(href);
+  };
 
   return (
     <>
@@ -39,6 +47,7 @@ export default function Header() {
                   <Link
                     key={item.href}
                     href={item.href}
+                    onClick={handleNav(item.href)}
                     className={`relative flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 z-10 ${
                       isActive
                         ? "text-white scale-105"
@@ -100,6 +109,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
+                  onClick={handleNav(item.href)}
                   className={`relative flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300 z-10 active:scale-90 ${
                     isActive
                       ? "text-white scale-105"
