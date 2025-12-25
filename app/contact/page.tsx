@@ -65,7 +65,7 @@ export default function ContactPage() {
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                   <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white text-stroke">
                     <Mail size={20} className="inline mr-2 text-[#CCCCFF]" />
-                    {t('pages.contact.header')} <span className="animate-kaomoji ml-2 inline-block">{t('pages.contact.headerEmoji')}</span>
+                    {t('pages.contact.header')} <span className="animate-kaomoji ml-2 inline-block text-[#CCCCFF]">{t('pages.contact.headerEmoji')}</span>
                   </h1>
                   
                   <div className="hidden md:flex items-center gap-4 select-none pointer-events-none">

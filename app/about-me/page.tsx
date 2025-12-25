@@ -48,7 +48,7 @@ export default function AboutMePage() {
               >
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                   <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white text-stroke">
-                    {t('pages.about.header')} <span className="animate-kaomoji ml-2 inline-block">{t('pages.about.headerEmoji')}</span>
+                    {t('pages.about.header')} <span className="animate-kaomoji ml-2 inline-block text-[#CCCCFF]">{t('pages.about.headerEmoji')}</span>
                   </h1>
                   
                   <div className="hidden md:flex items-center gap-4 select-none pointer-events-none">

@@ -123,7 +123,7 @@ export default function EducationWorkPage() {
                   <h1 className="text-lg sm:text-xl md:text-2xl font-extrabold text-white text-stroke flex items-center gap-1 sm:gap-3 whitespace-nowrap">
                     <GraduationCap className="text-[#CCCCFF] animate-pulse w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8" />
                     {t('pages.journey.header')} 
-                    <span className="animate-kaomoji ml-1 sm:ml-2 inline-block">{t('pages.journey.headerEmoji')}</span>
+                    <span className="animate-kaomoji ml-1 sm:ml-2 inline-block text-[#CCCCFF]">{t('pages.journey.headerEmoji')}</span>
                   </h1>
                 </div>
               </div>

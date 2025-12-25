@@ -161,7 +161,7 @@ export default function ProjectsPage() {
               >
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
                   <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white text-stroke">
-                    {t('pages.projects.header')} <span className="animate-kaomoji ml-2 inline-block">{t('pages.projects.headerEmoji')}</span>
+                    {t('pages.projects.header')} <span className="animate-kaomoji ml-2 inline-block text-[#CCCCFF]">{t('pages.projects.headerEmoji')}</span>
                   </h1>
                   <p className="text-[11px] md:text-xs text-gray-400 max-w-md text-center sm:text-right italic">
                     {t('pages.projects.description')}
